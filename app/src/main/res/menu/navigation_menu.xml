@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Alcohol Information">
+        <menu>
+            <group
+                android:id="@+id/AlcoholInformationItems"
+                android:checkableBehavior="single"
+                android:enabled="true"
+                android:visible="true">
+                <item
+                    android:id="@+id/nav_information_fragment"
+                    android:icon="@drawable/ic_information"
+                    android:title="@string/InformationFeatureTitle" />
+
+                <item
+                    android:id="@+id/nav_consequence_fragment"
+                    android:icon="@drawable/ic_consequence"
+                    android:title="@string/ConsequenceTitle" />
+            </group>
+        </menu>
+    </item>
+
+
+    <item android:title="Drinking Tool">
+        <menu>
+            <group
+                android:id="@+id/DrinkingToolItems"
+                android:checkableBehavior="single"
+                android:enabled="true"
+                android:visible="true">
+                <item
+                    android:id="@+id/nav_calculator_fragment"
+                    android:icon="@drawable/ic_calculate"
+                    android:title="@string/CalculatorFeatureTitle" />
+                <item
+                    android:id="@+id/nav_face_rec_fragment"
+                    android:icon="@drawable/ic_face"
+                    android:title="@string/FaceRecFeatureTitle" />
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Sobriety Reminder">
+        <menu>
+            <group
+                android:id="@+id/Reminder"
+                android:checkableBehavior="single"
+                android:enabled="true"
+                android:visible="true">
+
+                <item
+                    android:id="@+id/timed_sobriety_reminder_switch"
+                    android:icon="@drawable/ic_alarm"
+                    android:title=""
+                    app:actionLayout="@layout/switch_item"
+                    app:showAsAction="always" />
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarThumbVertical="@color/button"
+    tools:context=".Fragment.ConsequenceFragment">
+    <FrameLayout
+        android:id="@+id/consequenceChildFragment"
+        android:name="com.example.FragmentOne"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+
+</FrameLayout>

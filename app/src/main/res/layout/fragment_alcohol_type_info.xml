@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarThumbVertical="@color/button"
+    tools:context=".Fragment.InformationFragments.AlcoholTypeInfoFragment">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@drawable/alcohol_type"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="#80CCCCCC"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:background="#80CCCCCC"
+            android:gravity="center"
+            android:text="@string/AlcoholTypeInfoSelectionTitle"
+            android:textColor="@color/deepblue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical"
+        android:scrollbarThumbVertical="@color/button"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/blankTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+
+            <LinearLayout
+                android:id="@+id/beer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/beer_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/beer_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_beer" />
+
+                    <TextView
+                        android:id="@+id/the_beer_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Beer_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/beer_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/beer_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Beer"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/wine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/wine_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/wine_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_wine" />
+
+                    <TextView
+                        android:id="@+id/the_wine_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Wine_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/wine_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/wine_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Wine"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/whiskey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/whiskey_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/whiskey_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_alcohol" />
+
+                    <TextView
+                        android:id="@+id/the_whiskey_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Whiskey_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/whiskey_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/whiskey_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Whiskey"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/vodka"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/vodka_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/vodka_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_vodka" />
+
+                    <TextView
+                        android:id="@+id/the_vodka_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Vodka_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/vodka_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/vodka_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Vodka"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/rum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/rum_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/rum_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_rum" />
+
+                    <TextView
+                        android:id="@+id/the_rum_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Rum_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/rum_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/rum_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Rum"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/gin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/gin_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/gin_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_gin" />
+
+                    <TextView
+                        android:id="@+id/the_gin_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Gin_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/gin_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/gin_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Gin"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/tequila"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/tequila_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tequila_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_tequila" />
+
+                    <TextView
+                        android:id="@+id/the_tequila_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Tequila_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/tequila_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tequila_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Tequila"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/brandy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/brandy_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/brandy_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_brandy" />
+
+                    <TextView
+                        android:id="@+id/the_brandy_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Brandy_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/brandy_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/brandy_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Brandy"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

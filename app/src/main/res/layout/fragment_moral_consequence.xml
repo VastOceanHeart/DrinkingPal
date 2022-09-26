@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarThumbVertical="@color/button"
+    tools:context=".Fragment.ConsequenceFragments.MoralConsequenceFragment">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@drawable/moral_consequence"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="#80CCCCCC"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:background="#80CCCCCC"
+            android:gravity="center"
+            android:text="@string/moralConsequenceTitle"
+            android:textColor="@color/deepblue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/blankTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FillWithBlankLine2" />
+
+    <LinearLayout
+        android:id="@+id/moral_definition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4sp"
+        android:layout_marginRight="4sp"
+        android:background="@drawable/textview_border4"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/moral_definition_title"
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/moral_definition_image"
+                android:layout_width="73dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8sp"
+                android:layout_weight="0.1"
+                card_view:srcCompat="@drawable/ic_moral_definition" />
+
+            <TextView
+                android:id="@+id/the_moral_definition_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6sp"
+                android:layout_weight="0.9"
+                android:gravity="fill"
+                android:text="@string/Moral_definition_title"
+                android:textColor="@color/deepblue"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/moral_definition_drop_down"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/moral_definition_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4sp"
+            android:layout_marginRight="4sp"
+            android:layout_weight="1"
+            android:gravity="fill"
+            android:text="@string/Moral_definition"
+            android:textColor="@color/deepblue"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/blankTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FillWithBlankLine2" />
+
+    <LinearLayout
+        android:id="@+id/alcohol_moral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4sp"
+        android:layout_marginRight="4sp"
+        android:background="@drawable/textview_border4"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/alcohol_moral_title"
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/alcohol_moral_image"
+                android:layout_width="73dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8sp"
+                android:layout_weight="0.1"
+                card_view:srcCompat="@drawable/ic_alcohol_moral" />
+
+            <TextView
+                android:id="@+id/the_alcohol_moral_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="6sp"
+                android:layout_weight="0.9"
+                android:gravity="fill"
+                android:text="@string/Alcohol_moral_title"
+                android:textColor="@color/deepblue"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/alcohol_moral_drop_down"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/alcohol_moral_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4sp"
+            android:layout_marginRight="4sp"
+            android:layout_weight="1"
+            android:gravity="fill"
+            android:text="@string/Alcohol_moral"
+            android:textColor="@color/deepblue"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</LinearLayout>

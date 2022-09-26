@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarThumbVertical="@color/button"
+    tools:context=".Fragment.ConsequenceFragments.HealthyConsequenceFragment">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@drawable/healthy_consequence"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="#80CCCCCC"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:background="#80CCCCCC"
+            android:gravity="center"
+            android:text="@string/healthyConsequenceTitle"
+            android:textColor="@color/deepblue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/blankTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FillWithBlankLine2" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical"
+        android:scrollbarThumbVertical="@color/button"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".Fragment.ConsequenceFragments.HealthyConsequenceFragment">
+
+            <LinearLayout
+                android:id="@+id/alcohol_kills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/alcohol_kills_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/alcohol_kills_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_alcohol_kills" />
+
+                    <TextView
+                        android:id="@+id/the_alcohol_kills_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Alcohol_kills_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/alcohol_kills_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/alcohol_kills_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Alcohol_kills"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/short_effect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/short_effect_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/short_effect_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_short_effect" />
+
+                    <TextView
+                        android:id="@+id/the_short_effect_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Short_term_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/short_effect_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/short_effect_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Short_term"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/long_effect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/long_effect_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/long_effect_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_long_effect" />
+
+                    <TextView
+                        android:id="@+id/the_long_effect_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Long_term_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/long_effect_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/long_effect_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Long_term"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/alcohol_poison"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/alcohol_poison_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/alcohol_poison_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_alcohol_poison" />
+
+                    <TextView
+                        android:id="@+id/the_alcohol_poison_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Alcohol_poison_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/alcohol_poison_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/alcohol_poison_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Alcohol_poison"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/alcoholism"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/alcoholism_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/alcoholism_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_alcoholism" />
+
+                    <TextView
+                        android:id="@+id/the_alcoholism_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Alcoholism_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/alcoholism_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/alcoholism_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Alcoholism"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

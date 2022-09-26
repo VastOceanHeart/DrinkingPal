@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical"
+    tools:context=".Fragment.ConsequenceFragments.ConsequenceSelectionFragment">
+
+    <TextView
+        android:id="@+id/blankTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FillWithBlankLine" />
+
+    <LinearLayout
+        android:id="@+id/lawConsequenceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="130sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="50sp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/lawConsequenceImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/law_consequence" />
+
+        <TextView
+            android:id="@+id/lawConsequenceTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/lawConsequenceTitle"
+            android:textColor="@color/deepblue"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/blankTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="4sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginRight="50sp"
+        android:layout_marginBottom="15sp"
+        android:background="@color/line_gray" />
+
+
+    <LinearLayout
+        android:id="@+id/moralConsequenceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="130sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/moralConsequenceImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/moral_consequence" />
+
+        <TextView
+            android:id="@+id/moralConsequenceTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/moralConsequenceTitle"
+            android:textColor="@color/deepblue"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/blankTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="4sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginRight="50sp"
+        android:layout_marginBottom="15sp"
+        android:background="@color/line_gray" />
+
+    <LinearLayout
+        android:id="@+id/healthyConsequenceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="130sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginRight="50sp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/healthyConsequenceImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/healthy_consequence" />
+
+        <TextView
+            android:id="@+id/healthyConsequenceTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="@string/healthyConsequenceTitle"
+            android:textColor="@color/deepblue"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/blankTextView3"
+        android:layout_width="match_parent"
+        android:layout_height="4sp"
+        android:layout_marginLeft="50sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginRight="50sp"
+        android:layout_marginBottom="15sp"
+        android:background="@color/line_gray" />
+
+</LinearLayout>

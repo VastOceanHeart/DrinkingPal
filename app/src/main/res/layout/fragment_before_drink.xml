@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarThumbVertical="@color/button"
+    tools:context=".Fragment.InformationFragments.AlcoholTypeInfoFragment">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@drawable/before_drink"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="#80CCCCCC"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:background="#80CCCCCC"
+            android:gravity="center"
+            android:text="@string/BeforeDrinkTitle"
+            android:textColor="@color/deepblue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/blankTextView0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FillWithBlankLine2" />
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical"
+        android:scrollbarThumbVertical="@color/button"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".Fragment.InformationFragments.HangoverRemediesInfoFragment">
+
+
+            <LinearLayout
+                android:id="@+id/eat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/eat_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/eat_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_eat" />
+
+                    <TextView
+                        android:id="@+id/the_eat_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Eat_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/eat_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/eat_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Eat"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/hydrated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/hydrated_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/hydrated_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_water" />
+
+                    <TextView
+                        android:id="@+id/the_hydrated_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Hydrated_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/hydrated_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/hydrated_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Hydrated"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/fast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/fast_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/fast_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_fast" />
+
+                    <TextView
+                        android:id="@+id/the_fast_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Fast_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/fast_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/fast_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Fast"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/limit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/limit_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/limit_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_limit" />
+
+                    <TextView
+                        android:id="@+id/the_limit_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Limit_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/limit_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/limit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Limit"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/count_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/count_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_count" />
+
+                    <TextView
+                        android:id="@+id/the_count_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Count_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/count_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/count_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Count"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/no_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/no_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_no" />
+
+                    <TextView
+                        android:id="@+id/the_no_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/No_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/no_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/no_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/No"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/drive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/drive_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/drive_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_drive" />
+
+                    <TextView
+                        android:id="@+id/the_drive_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Drive_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/drive_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/drive_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Drive"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

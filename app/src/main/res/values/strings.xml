@@ -1,0 +1,272 @@
+<resources>
+    <string name="app_name">DrinkingPal</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="FillWithBlankLine">               \n                   </string>
+    <string name="FillWithBlankLine2">                                   </string>
+
+    <string name="GoogleAPIkey">AIzaSyA8MmTILjTs1oW96qtkHUPcsTmbTx34UlE</string>
+    <string name="SearchEngineID">27e69ad377a5743e7</string>
+
+    <!--For menu and navigation-->
+    <string name="InformationFeatureTitle">Alcohol Information</string>
+    <string name="AlarmFeatureTitle">Drinking Alarm</string>
+    <string name="CalculatorFeatureTitle">Drinking Calculator</string>
+    <string name="FaceRecFeatureTitle">Drinking Recognition</string>
+    <string name="ConsequenceTitle">Drink Consequence</string>
+    <string name="ReminderTitle">Sobriety Reminder</string>
+
+    <!--For Alcohol Information Fragment and its child fragments-->
+    <!--Standard Drink Info-->
+    <string name="StandardDrinkInfoSelection">Standard Drink</string>
+    <string name="StandardDrinkInfoSelectionTitle">What is Standard Drink?</string>
+    <string name="StandardDrinkDefinition"><b>What is a Standard Drink?</b>\nAustralia\'s national alcohol guidelines use the \'standard drink\' as a measure of alcohol consumed. One standard drink is defined as containing 10 grams of alcohol. (12.5ml approx. of pure alcohol)</string>
+    <string name="StandardDrinkDefinition2"><b>What is the Limit?</b>\nAssuie health experts recommend no more than <b>4 standard drinks</b> a day and no more than <b>10 standard drinks</b> in any given week.</string>
+    <string name="StandardDrinkGuidanceTitle"><b>Our Handy Guilde can help you</b></string>
+    <string name="StandardDrinkGuidanceContent">Standard Drink\n=\n·Spirits 40% alcohol, 30ml nip\n\n·Wine 13% alcohol, 100ml average serving\n\n·Sparkling wine 13% alcohol, 100ml\n\n·Full Strength Beer 4.9% alcohol, 285ml glass\n\n·Light Beer 2.7% alcohol, 425ml glass\n\n·Cider 4.9% alcohol, 285ml glass</string>
+
+    <!--Alcohol Type Info-->
+    <string name="AlcoholTypeInfoSelection">Alcohol Type</string>
+    <string name="AlcoholTypeInfoSelectionTitle">Common Alcohol Types </string>
+    <string name="Beer_title"><b>Beer</b></string>
+    <string name="Beer">Beer is a strong alcoholic beverage prepared from malt that has been fermented with yeast and hops. Lager, Ale, Craft Beer, and other varieties of beer exist. The Latin word "bibere," which means to drink, is where the term "beer" originates.</string>
+    <string name="Wine_title"><b>Wine</b></string>
+    <string name="Wine">Wine is typically a fermented grape-based alcoholic beverage. The sugar in the grapes is consumed by yeast, who then transforms it into ethanol and carbon dioxide. Red wine and white wine are the two categories into which most wines fall.</string>
+    <string name="Whiskey_title"><b>Whiskey / Bourbon</b></string>
+    <string name="Whiskey">A type of American whisky made from rye and maize is called bourbon. A spirit called whisky is created by distilling malted grains, particularly barley or rye. Whiskey is not always whisky, while vice versa is true of bourbon. In order to distinguish itself from whisky, bourbon must be produced in the United States using at least 51% maize.</string>
+    <string name="Vodka_title"><b>Vodka</b></string>
+    <string name="Vodka">An alcoholic beverage with Russian roots, vodka is produced by distilling rye, wheat, or potatoes. It is distilled liquor with an alcohol concentration of between 40 and 55 percent. It is clear and colourless and has any discernible scent or flavour.</string>
+    <string name="Rum_title"><b>Rum</b></string>
+    <string name="Rum">Rum is an alcoholic beverage created by fermenting and distilling sugarcane juice or molasses. In most cases, oak barrels are used to mature the distillate, a transparent liquid. Nearly all of the world\'s sugar-producing regions also produce rum.</string>
+    <string name="Gin_title"><b>Gin</b></string>
+    <string name="Gin">A fermentable grain, starch, or fruit, juniper berries, and additional botanicals are used to make gin. The spirit must include juniper and have a volume alcohol content of at least 40% in order to be categorised as gin. Gin differs from other alcoholic beverages because botanicals are used in the distilling process.</string>
+    <string name="Tequila_title"><b>Tequila</b></string>
+    <string name="Tequila">Tequila is a Mexican alcoholic beverage that is primarily created from the fermented sap of blue agave plants that have undergone two successive distillations. Tequila has fewer calories, no sugar, and no carbohydrates, making it a potentially healthier alternative to some other types of alcohol.</string>
+    <string name="Brandy_title"><b>Brandy</b></string>
+    <string name="Brandy">Brandy is an alcoholic beverage made by distilling wine or a fruit mash with yeast. Brandies manufactured from wines or fermented mashes of other fruits are frequently referred to by the name of the specific fruit; the term used alone normally refers to the grape product.</string>
+
+    <!--Hangover Remedy Info-->
+    <string name="HangoverRemedyInfoSelection">Hangover Remedy</string>
+    <string name="HangoverRemedyInfoSelection2">Drink Guideline</string>
+    <string name="HangoverRemedyInfoSelectionTitle">Hangover Remedies</string>
+    <string name="HangoverRemedyInfoSelectionTitle2">Drink Guideline</string>
+    <string name="BeforeDrinkTitle">Before Drink Guideline</string>
+    <string name="AfterDrinkTitle">After Drink Guideline</string>
+
+    <!--Before Drink-->
+    <string name="Eat_title"><b>Eat before Drink</b></string>
+    <string name="Eat">When you start drinking, the alcohol will reach your bloodstream more quickly if your stomach is empty. However, food will slow the flow, which allows more time for alcohol to break down. Thus, eating before your drink is essential.</string>
+    <string name="Hydrated_title"><b>Stay Hydrated</b></string>
+    <string name="Hydrated">Alcohol will dehydrate your body. Hydration is vital even if you are not thirsty. Keep in mind that drinking water in between every few drinks can help you stay hydrated.</string>
+    <string name="Fast_title"><b>Don’t Drink too Fast</b></string>
+    <string name="Fast">Your body can only process one standard drink per hour. So keep in mind that don’t drink too fast. Take your time to handle one standard drink before drinking the next one. You can always dilute the alcohol with water or juice.</string>
+    <string name="Limit_title"><b>Know Your Limit</b></string>
+    <string name="Limit">Australian Guidelines suggest adults should intake no more than 4 standard drinks per day or 10 standard drinks during one week. Thus, you should know your limit before drinking and drink no more than the recommended amount of alcohol.</string>
+    <string name="Count_title"><b>Count Your Drink</b></string>
+    <string name="Count">Set yourself a drinking limit before the first drink and stick to it. People often drink more than they realise. Rather than topping up your glass, you should finish your drink before starting a new one. Therefore, you know how many drinks you have taken. Avoid drinking in rounds as well.</string>
+    <string name="No_title"><b>Learn to Say No</b></string>
+    <string name="No">Sometimes it is hard to say “NO thanks” to others, especially when peer pressure is hard to resist. However, regardless of what others are saying or doing, it is unnecessary to follow them. Saying NO won’t hurt anyone, but can protect yourself.</string>
+    <string name="Drive_title"><b>Don’t Drink and Drive</b></string>
+    <string name="Drive">It is against Law to drive with a BAC above 0.05 for full-license drivers and a BAC of 0.00 for Learner and Probationary drivers in Australia. The more drinks you have, the higher chance for you to have car accidents. It will hurt you and others on the road. Please don’t drink and drive. Plan how to get home early (Uber, Public Transport, Friend who doesn’t drink, etc.)</string>
+
+
+    <!--After Drink-->
+    <string name="Sleep_title"><b>Get some Sleep</b></string>
+    <string name="Sleep">Lie in bed and sleep! Sleep is always the cure. Even sleeping for two hours is going to help you recover from the hangover!</string>
+    <string name="Drink_water_title"><b>Drink some Water or Juice</b></string>
+    <string name="Drink_water">Alcohol will dehydrate your body, your body needs hydration! So the first thing you wake up in the morning should be drinking some water or juice!</string>
+    <string name="Vitamin_title"><b>Get some Vitamins</b></string>
+    <string name="Vitamin">Your body needs Vitamin supplement after consuming alcohol. The most convenient way is to drink orange juice to gain Vitamin C. Zinc and Vitamin B are helpful to hangover relief.</string>
+    <string name="Food_title"><b>Eat some Food</b></string>
+    <string name="Food">Maybe right now you don’t want to eat yet, but eating is good to recover from a hangover. Don’t eat too much food or unhealthy food. You should intake food with high protein.</string>
+    <string name="Exercise_title"><b>Exercise</b></string>
+    <string name="Exercise">Appropriate amount of exercise is going to wake up your body, enhance metabolism. Taking some fresh air while walking can be helpful.</string>
+    <string name="Shower_title"><b>Take a Shower</b></string>
+    <string name="Shower">Take a shower after a hangover. A shower can not only clean up your body, but also wake your body up. Cold or hot water is either fine for you.</string>
+    <string name="Hair_title"><b>Use Hair of Dog</b></string>
+    <string name="Hair">The hair of a dog is not the hair of a dog. It is an alcoholic drink that can help you recover from a hangover. Though the hair of a dog can be helpful, it can only relieve it for a short amount of time. Please use it with caution.</string>
+
+    <!--Quit Drinking Timeline Info-->
+    <string name="QuitDrinkingTimelineInfoSelection">Quit Drinking Timeline</string>
+    <string name="QuitDrinkingTimelineInfoSelectionTitle">Quit Drinking Timeline</string>
+    <string name="Twelve_hour_title"><b>12 hours</b></string>
+    <string name="Twelve_hour">Withdrawal symptoms appear, possible shaking, vomiting, sweating, mania, and anxiety.</string>
+
+    <string name="One_day_title"><b>1 day</b></string>
+    <string name="One_day">Withdrawal symptoms persist. Craving for alcohol, fatigue, low mood, sleep disturbance.</string>
+
+    <string name="Two_day_title"><b>2 days</b></string>
+    <string name="Two_day">A dangerous period. More serious withdrawal symptoms occur, such as rapid heartbeat, increased blood pressure, and convulsions.</string>
+
+    <string name="Three_day_title"><b>3 days</b></string>
+    <string name="Three_day">For most people, this is when withdrawal symptoms begin to subside or become more manageable.</string>
+
+    <string name="Five_day_title"><b>5 days</b></string>
+    <string name="Five_day">For most people, withdrawal symptoms will end at this point. For a small number of people, withdrawal symptoms may worsen and develop into more severe symptoms.</string>
+
+    <string name="One_week_title"><b>1 week</b></string>
+    <string name="One_week">Sleep quality may begin to improve, and it may take a month or more for some people to get better sleep.</string>
+
+    <string name="Two_week_title"><b>2 weeks</b></string>
+    <string name="Two_week">You may start to lose weight due to reduced alcohol calorie intake. Fatty livers not severely damaged by alcohol consumption begin to show signs of recovery.</string>
+
+    <string name="One_month_title"><b>1 month</b></string>
+    <string name="One_month">Those with high blood pressure due to alcohol consumption may have their blood pressure lowered to a healthier level. Your skin may look healthier.</string>
+
+    <string name="One_year_title"><b>1 year</b></string>
+    <string name="One_year">Among some people, hangover symptoms such as fatigue, sleep disturbance may persist for a long time, but after 12 months of abstinence, symptoms disappear in almost all people. The health benefits of quitting drinking begin to show up.</string>
+
+    <!--For Standard Drink Calculator -->
+    <string name="Total_Standard_Drink_Title">Total Standard Drink</string>
+    <string name="Total_Standard_Drink_Hint">After you input the alcohol you drink, here will show you how many standard drink you intake</string>
+
+    <!--Beer-->
+    <string name="beer_title">Beer</string>
+    <string name="full_strength_beer_small_name">Glass Of Full Strength Beer</string>
+    <string name="full_strength_beer_small_volume">285ml</string>
+    <string name="full_strength_beer_small_density">4.8%</string>
+
+    <string name="full_strength_beer_large_name">Bottle Of Full Strength Beer</string>
+    <string name="full_strength_beer_large_volume">375ml</string>
+    <string name="full_strength_beer_large_density">4.8%</string>
+
+    <string name="mid_strength_beer_small_name">Glass Of Mid Strength Beer</string>
+    <string name="mid_strength_beer_small_volume">285ml</string>
+    <string name="mid_strength_beer_small_density">3.5%</string>
+
+    <string name="mid_strength_beer_large_name">Bottle Of Mid Strength Beer</string>
+    <string name="mid_strength_beer_large_volume">375ml</string>
+    <string name="mid_strength_beer_large_density">3.5%</string>
+
+    <string name="low_strength_beer_small_name">Glass Of Low Strength Beer</string>
+    <string name="low_strength_beer_small_volume">285ml</string>
+    <string name="low_strength_beer_small_density">2.7%</string>
+
+    <string name="low_strength_beer_large_name">Bottle Of Low Strength Beer</string>
+    <string name="low_strength_beer_large_volume">375ml</string>
+    <string name="low_strength_beer_large_density">2.7%</string>
+
+    <!--Wine-->
+    <string name="wine_title">Wine</string>
+    <string name="average_restaurant_serving_red_wine_name">Average Restaurant Serving Of Red Wine</string>
+    <string name="average_restaurant_serving_red_wine_volume">150ml</string>
+    <string name="average_restaurant_serving_red_wine_density">13.5%</string>
+
+    <string name="standard_serve_red_wine_name">Standard Serve Of Red Wine</string>
+    <string name="standard_serve_red_wine_volume">100ml</string>
+    <string name="standard_serve_red_wine_density">13.5%</string>
+
+    <string name="bottle_red_wine_name">Bottle Of Red Wine</string>
+    <string name="bottle_red_wine_volume">750ml</string>
+    <string name="bottle_red_wine_density">13.5%</string>
+
+    <string name="standard_serve_port_name">Standard serve of port</string>
+    <string name="standard_serve_port_volume">60ml</string>
+    <string name="standard_serve_port_density">17.5%</string>
+
+    <!--White wine-->
+    <string name="white_wine_title">White Wine</string>
+    <string name="average_restaurant_serving_white_wine_name">Average Restaurant Serving Of White Wine</string>
+    <string name="average_restaurant_serving_white_wine_volume">150ml</string>
+    <string name="average_restaurant_serving_white_wine_density">11.5%</string>
+
+    <string name="standard_serve_white_wine_name">Standard Serve Of White Wine</string>
+    <string name="standard_serve_white_wine_volume">100ml</string>
+    <string name="standard_serve_white_wine_density">11.5%</string>
+
+    <string name="bottle_white_wine_name">Bottle Of White Wine</string>
+    <string name="bottle_white_wine_volume">750ml</string>
+    <string name="bottle_white_wine_density">11.5%</string>
+
+    <!--Champagne-->
+    <string name="champagne_title">Champagne</string>
+    <string name="average_restaurant_serving_champagne_name">Average Restaurant Serving Of Champagne</string>
+    <string name="average_restaurant_serving_champagne_volume">150ml</string>
+    <string name="average_restaurant_serving_champagne_density">12.0%</string>
+
+    <string name="bottle_champagne_name">Bottle Of Champagne</string>
+    <string name="bottle_champagne_volume">750ml</string>
+    <string name="bottle_champagne_density">12.0%</string>
+
+    <!--Spirits-->
+    <string name="spirits_title">Spirits</string>
+    <string name="high_strength_straight_spirits_name">High Strength Straight Spirits</string>
+    <string name="high_strength_straight_spirits_volume">30ml</string>
+    <string name="high_strength_straight_spirits_density">40.0%</string>
+
+    <string name="full_strength_ready_spirits_name">Full Strength Ready To Drink Spirits</string>
+    <string name="full_strength_ready_spirits_volume">275ml</string>
+    <string name="full_strength_ready_spirits_density">5.0%</string>
+
+    <string name="high_strength_ready_spirits_name">High Strength Ready To Drink Spirits</string>
+    <string name="high_strength_ready_spirits_volume">275ml</string>
+    <string name="high_strength_ready_spirits_density">7.0%</string>
+
+    <string name="full_strength_mixed_spirits_name">Full Strength Pre-mixed Spirits</string>
+    <string name="full_strength_mixed_spirits_volume">250ml</string>
+    <string name="full_strength_mixed_spirits_density">5.0%</string>
+
+    <string name="high_strength_mixed_spirits_name">High Strength Pre-mixed Spirits</string>
+    <string name="high_strength_mixed_spirits_volume">250ml</string>
+    <string name="high_strength_mixed_spirits_density">7.0%</string>
+
+    <string name="standard_drink_tips"><b>Tips</b>\nHealthy man and woman should drink no more than <b>10 Standard Drink</b> per week, and no more than <b>4 Standard Drink</b> on any one day.</string>
+    <string name="recommendation_title"><b>Recommendation</b></string>
+    <string name="recommendation_one">Still under a safe condition, you can continue drinking.</string>
+    <string name="recommendation_two">No more than 2 standard drinks within 1 hour, consider taking a break.</string>
+    <string name="recommendation_three">You are reaching the daily limit, please consider stopping drinking.</string>
+    <string name="recommendation_four">You have exceeded the daily drinking limit, please stop drinking.</string>
+    <string name="recommendation_five">You have exceeded your weekly limit of alcohol consumption! Please stop this drinking spree now!</string>
+
+
+    <!--For Alarm Fragment-->
+    <string name="purpose_title"><b>What is this?</b></string>
+    <string name="purpose" >This Sobriety Reminder aims to provide you with occasional one-sentence tips in a period of time you specify on how to control your drinking to help you strengthen your resolve and will to control your drinking, with the added benefit of helping you collect beautiful sentences.</string>
+    <string name="explain_title"><b>How it works?</b></string>
+    <string name="explain">1. Click <b>Start</b> and <b>End</b> button to select your favorite reminding time range.\n\n2. Turn on the switch.\n\n3. Done! We will push you the notification at your selected time range.</string>
+    <string name="drink_time_title"><b>You have been drinking for</b></string>
+    <string name="drink_recommendation_title"><b>Recommendation</b></string>
+    <string name="daily_sentence_title"><b>Today Favorite Sentence</b></string>
+    <string name="daily_sentence_hint"><i>Once you click on the notification card, your selected favourite sentence will be displayed here</i></string>
+    <string name="daily_image_title"><b>Today Favorite Image</b></string>
+
+
+    <!--For Consequence Fragment and its child fragments-->
+    <string name="lawConsequenceTitle">Law Consequence</string>
+    <string name="moralConsequenceTitle">Moral Consequence</string>
+    <string name="healthyConsequenceTitle">Health Consequence</string>
+    <string name="xxxConsequenceTitle">Health Consequence</string>
+
+    <!--Law consequence-->
+    <string name="Public_drink_title"><b>Drunk in a public place</b></string>
+    <string name="Public_drink">There are <b>three offences</b> under the Act that can result in an arrest and charges if you are drunk in a public place.\n\n<b>Offence 1: Drunk in a public place</b>\nIf your speech, coordination, balance, or behaviour is noticeably altered and the police feel it is because you have been drinking alcohol, they may think you are drunk.\n\n<b>Offence 2:Drunk and disorderly in a public place</b>\nBeing drunk and acting in a way that disrupts the peace, interferes with others, or is perceived to be doing so.\n\n<b>Offence 3:Drunk and behaving in a riotous or disorderly manner</b>\nGetting drunk and behaving in a way that makes a member of the public worry about a possible violation of the peace. Additionally, if the authorities believe your behaviour is extreme, they may charge you with this more serious version of the disorderly offence.\n\n<u>If you’re convicted of one of these offences, you’ll incur a penalty:</u>\n\n<b>Drunk in a public place</b>\nA maximum of 8 penalty units. (8 penalty units = $1321.76)\n\n<b>Drunk and disorderly</b>first offence (a maximum of 20 penalty units or 3 days in prison). Second or subsequent offence (20 penalty units or 1 month in prison).  (20 penalty units = $33043.40)\n\n<b>Drunk and behaving in a riotous or disorderly manner</b>maximum of 10 penalty units or prison for 2 months. (10 penalty units = $1652.20)\n\nA penalty unit is how a fine is calculated. The amount of one penalty unit is indexed and increases each year on 1 July. Currently, one penalty unit is <b>$165.22</b>.</string>
+    <string name="Buy_alcohol_title"><b>Buying Alcohol or going to other licensed premises</b></string>
+    <string name="Buy_alcohol">If you’re <b>under 18</b>, you’re <b>Not allowed</b> to buy alcohol, even if you’re buying it for an adult (someone over the age of 18).\n\nIf you <b>ask your friends</b> (over 18) to buy alcohol for you, and they give you the alcohol, they can get fined.\n\nIf you are <b>under 18</b>, you are <b>Not allowed</b> to be in a licensed place (such as a bar or pub) where alcohol is served unless one or more of the following applies:\n\n·you are with a responsible adult\n\n·you are having a meal\n\n·you are a resident of the licensed place\n\n·you are employed by the licensed venue but not involved in the supply of alcohol\n\n·you are completing an approved training program in hospitality.\n\n<b>You, the person who is serving you</b>, and <b>the owner of</b> the licensed place, can be fined if you’re caught and do not satisfy one or more of the above categories.\n\nA liquor licensee can be fined up to <b>$19,343</b> for selling alcohol to a minor.</string>
+    <string name="Private_drink_title"><b>Underage Drinking in Private Homes</b></string>
+    <string name="Private_drink">·In their own homes, parents or guardians are <b>permitted to provide alcohol</b> to their own children <b>under the age of 18.</b>\n\n·<b>It is against the law</b> to serve alcohol to a minor in another person\'s house <b>without</b> their parent or legal guardian\'s consent. The maximum fine for adults is <b>$19,343.</b>\n\n·Anyone planning a party for youngsters under the <b>age of 18</b> is advised to obtain their parents\' or guardians\' <b>written consent</b>. This also holds true for social visits.\n\n·According to the Liquor Control Reform Act, adults must show that they are responsibly supervising the supply of alcohol to anyone under the age of 18 in their residence.</string>
+    <string name="Drink_drive_title"><b>Drink and Drive in Victoria</b></string>
+    <string name="Drink_drive">·In Victoria and all other states and territories, the legal blood alcohol concentration (BAC) limit for drivers with a full licence is 0.05.\n\nA <b>BAC of zero</b> is <b>mandatory</b> for drivers with a <b>probationary</b> licence (P plates) or <b>learner\'s</b> permit (L plates), <b>bus</b> and <b>taxi drivers</b>, and drivers of <b>trucks</b> exceeding 15 tonnes.\n\n·If you are convicted of <b>drunk driving</b>, you could be subject to harsh punishments:\n\n\t\t-Loss of licence\n\n\t\t-Fines\n\n\t\t-Imprisonment\n\n·Any vehicle you drive must have an alcohol <b>interlock</b> that has been <b>authorised by VicRoads</b> installed if you lose your licence or learner permit as a result of <b>drunk driving</b>. You must do this in order to get your licence or permission reissued.\n\n·Even if there is no alcohol detected in the driver\'s blood or breath, drinking alcohol while operating a vehicle or while seated next to a learner driver is <b>illegal</b>.\n\n·Drivers who are caught operating a vehicle in Victoria with having <b>illegal drugs in their system</b> and a blood or BAC reading above the legal limit face <b>significant penalties</b>.</string>
+
+    <!--Moral consequence-->
+    <string name="Moral_definition_title"><b>Moral Definition</b></string>
+    <string name="Moral_definition"><b>Moral standards</b>are those that are concerned with or relate to <b>how people behave</b>, particularly how to distinguish between right and wrong behaviour. Moral standards are the <b>guidelines</b>that people have for the kinds of behaviours they consider to be ethically acceptable and unacceptable.</string>
+    <string name="Alcohol_moral_title"><b>Alcohol Affects Moral</b></string>
+    <string name="Alcohol_moral">You may experience relaxation, reduced anxiety, and more confidence after consuming alcohol because it has an impact on the area of your brain that regulates inhibition. However, these results disappear shortly. Regardless of how you are feeling, the chemical changes in your brain can quickly cause more <b>unpleasant emotions</b>, including <b>anger, melancholy, or anxiety</b>.\n\nAccording to a recent study, <b>excessive alcohol use</b> may affect men\'s capacity for <b>empathy</b> and <b>ironic perception</b>. According to the study, long-term heavy drinking may <b>harm brain regions responsible for perceiving humour and emotion</b>.</string>
+
+    <!--Healthy consequence-->
+    <string name="Alcohol_kills_title"><b>Moral Definition</b></string>
+    <string name="Alcohol_kills">Alcohol-related causes account for about 2.5 million deaths globally each year. Alcohol abuse is a contributing factor in more than 200 illnesses that cause injury and harm. Alcohol is one of the top killers in the world.</string>
+    <string name="Short_term_title"><b>Short Term Effect</b></string>
+    <string name="Short_term">After drinking alcohol, the following day, you might experience a hangover, which may include the following:\n\n·Headache\n\n·Diarrhoea, nausea and vomiting\n\n·Tiredness and trembling\n\n·Increased heart rate and blood pressure\n\n·Trouble concentrating / Walking / Breathing / Controlling\n\n·Anxiety\n\n·Poor or decreased sleep\n\n·Coma\n\n·Death</string>
+    <string name="Long_term_title"><b>Long Term Effect</b></string>
+    <string name="Long_term">·Mental health issue, higher chance of suicide\n\n·Depression, anxiety, alcoholism, dependence on alcohol.\n\n·Weight gain\n\n·Diabetes\n\n·Erectile dysfunction\n\n·Cancer\n\n·Difficulties with male infertility including low sperm counts and low testosterone levels\n\n·Brain damage, dementia and stroke\n\n·High blood pressure, heart damage, and heart attacks\n\n·Liver failure</string>
+    <string name="Alcohol_poison_title"><b>Alcohol Poisoning</b></string>
+    <string name="Alcohol_poison">When drinking a lot of alcohol, the central nervous system is impacted, which slows heart and breathing rate. Additionally, it disrupts the gag reflex. If the drinker drops out from too much drinking, this raises the possibility of choking on vomit.\n\nAlcohol poisoning may be present in someone if they become disoriented, vomit, have a seizure, have pale complexion, or pass out. The followings are the potential symptoms:\n\n·Seizure\n\n·Vomiting\n\n·Confusion\n\n·Unconsciousness\n\n·Very slow breathing rate\n\n·Unresponsiveness</string>
+    <string name="Alcoholism_title"><b>Alcoholism </b></string>
+    <string name="Alcoholism">The word "alcoholism" is frequently applied to more serious alcohol use disorders. Some common symptoms of this disease are:\n\n<b>Craving:</b> The person has an extreme hunger for drinking.\n\n<b>Loss of control: </b>Once the person starts drinking, stopping becomes difficult. They might be unable to refrain from drinking or limit their consumption.\n\n<b>Tolerance: </b>To feel the effects of alcohol, the person needs to consume more of it.\n\n<b>Less consciousness: </b>The effects of their prolonged drinking are hidden from them.\n\nMany sufferers of severe AUD are unable to quit drinking on their own. With their condition, they require outside assistance.\n\nOur application seeks to help older teenagers to consume alcohol responsibly.
+
+</string>
+
+
+</resources>

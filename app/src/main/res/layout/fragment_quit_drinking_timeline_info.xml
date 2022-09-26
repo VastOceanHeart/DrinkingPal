@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarThumbVertical="@color/button"
+    tools:context=".Fragment.InformationFragments.AlcoholTypeInfoFragment">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@drawable/quit_drinking_timeline"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="#80CCCCCC"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:background="#80CCCCCC"
+            android:gravity="center"
+            android:text="@string/QuitDrinkingTimelineInfoSelectionTitle"
+            android:textColor="@color/deepblue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical"
+        android:scrollbarThumbVertical="@color/button"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".Fragment.InformationFragments.HangoverRemediesInfoFragment">
+
+
+            <TextView
+                android:id="@+id/blankTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/twelve_hour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/twelve_hour_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/twelve_hour_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_wind" />
+
+                    <TextView
+                        android:id="@+id/the_twelve_hour_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Twelve_hour_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/twelve_hour_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/twelve_hour_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Twelve_hour"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/one_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/one_day_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/one_day_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_tornado" />
+
+                    <TextView
+                        android:id="@+id/the_one_day_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/One_day_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/one_day_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/one_day_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/One_day"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/two_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/two_day_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/two_day_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_flash" />
+
+                    <TextView
+                        android:id="@+id/the_two_day_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Two_day_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/two_day_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/two_day_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Two_day"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/three_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/three_day_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/three_day_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_sunrise" />
+
+                    <TextView
+                        android:id="@+id/the_three_day_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Three_day_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/three_day_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/three_day_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Three_day"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/five_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/five_day_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/five_day_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_cloud" />
+
+                    <TextView
+                        android:id="@+id/the_five_day_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Five_day_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/five_day_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/five_day_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Five_day"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/one_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/one_week_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/one_week_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_oneweek" />
+
+                    <TextView
+                        android:id="@+id/the_one_week_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/One_week_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/one_week_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/one_week_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/One_week"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/two_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/two_week_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/two_week_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_twoweek" />
+
+                    <TextView
+                        android:id="@+id/the_two_week_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Two_week_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/two_week_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/two_week_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Two_week"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/one_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/one_month_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/one_month_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_onemonth" />
+
+                    <TextView
+                        android:id="@+id/the_one_month_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/One_month_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/one_month_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/one_month_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/One_month"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/one_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/one_year_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/one_year_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_oneyear" />
+
+                    <TextView
+                        android:id="@+id/the_one_year_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/One_year_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/one_year_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/one_year_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/One_year"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

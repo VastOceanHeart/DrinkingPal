@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbarThumbVertical="@color/button"
+    tools:context=".Fragment.ConsequenceFragments.LawConsequenceFragment">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@drawable/law_consequence"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:background="#80CCCCCC"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:background="#80CCCCCC"
+            android:gravity="center"
+            android:text="@string/lawConsequenceTitle"
+            android:textColor="@color/deepblue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/blankTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/FillWithBlankLine2" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical"
+        android:scrollbarThumbVertical="@color/button"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".Fragment.ConsequenceFragments.LawConsequenceFragment">
+
+            <LinearLayout
+                android:id="@+id/public_drink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/public_drink_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/public_drink_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_public_drink" />
+
+                    <TextView
+                        android:id="@+id/the_public_drink_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Public_drink_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/public_drink_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/public_drink_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Public_drink"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/buy_alcohol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/buy_alcohol_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/buy_alcohol_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_buy_alcohol" />
+
+                    <TextView
+                        android:id="@+id/the_buy_alcohol_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Buy_alcohol_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/buy_alcohol_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/buy_alcohol_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Buy_alcohol"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/private_drink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/private_drink_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/private_drink_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_private_drink" />
+
+                    <TextView
+                        android:id="@+id/the_private_drink_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Private_drink_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/private_drink_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/private_drink_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Private_drink"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+
+            <LinearLayout
+                android:id="@+id/drink_drive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4sp"
+                android:background="@drawable/textview_border4"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/drink_drive_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/drink_drive_image"
+                        android:layout_width="73dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8sp"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_drink_drive" />
+
+                    <TextView
+                        android:id="@+id/the_drink_drive_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6sp"
+                        android:layout_weight="0.9"
+                        android:gravity="fill"
+                        android:text="@string/Drink_drive_title"
+                        android:textColor="@color/deepblue"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/drink_drive_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.1"
+                        card_view:srcCompat="@drawable/ic_arrow_drop_down" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/drink_drive_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4sp"
+                    android:layout_weight="1"
+                    android:gravity="fill"
+                    android:text="@string/Drink_drive"
+                    android:textColor="@color/deepblue"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/blankTextView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/FillWithBlankLine2" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

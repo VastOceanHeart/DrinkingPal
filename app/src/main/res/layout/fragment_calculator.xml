@@ -1,0 +1,1910 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragment.CalculatorFragment">
+
+    <TextView
+        android:id="@+id/text_message1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/logo"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/standardDrinkResultLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/textview_border"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/total_image"
+            android:layout_width="73dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4sp"
+            android:layout_weight="0.1"
+            card_view:srcCompat="@drawable/ic_standard_drink2" />
+
+        <TextView
+            android:id="@+id/totalStandardDrinkTitle"
+            android:layout_width="537dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="fill"
+            android:text="@string/Total_Standard_Drink_Title"
+            android:textColor="@color/deepblue"
+            android:layout_marginLeft="8sp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/totalStandardDrinkResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="6sp"
+            android:layout_weight="1"
+            android:background="@drawable/textview_border3"
+            android:gravity="center"
+            android:hint="0"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_message2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/logo"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/recommendationTitleLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/textview_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/recommendationTitleBox"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="8sp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/twelve_hour_image"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"
+                card_view:srcCompat="@drawable/ic_tips" />
+
+            <TextView
+                android:id="@+id/recommendationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="8sp"
+                android:gravity="fill"
+                android:text="@string/recommendation_title"
+                android:textColor="@color/deepblue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recommendationContentLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6sp"
+            android:layout_marginRight="6sp"
+            android:layout_marginBottom="6sp"
+            android:background="@drawable/textview_border3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/recommendationContent"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="4sp"
+                android:layout_weight="1"
+                android:gravity="fill"
+                android:text="@string/recommendation_one"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300sp"
+        android:layout_marginRight="4sp"
+        android:backgroundTint="@color/white"
+        android:text="Clear"
+        android:textColor="@color/deepblue"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="vertical"
+        android:scrollbarThumbVertical="@color/button"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:id="@+id/alcohol_calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/beer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/beer_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/beer_background2"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/allBeer"
+                        android:layout_width="242dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/beer_title"
+                        android:textColor="@color/background_gray"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/beer_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_arrow_drop_down" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/beer_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/full_strength_beer_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/full_strength_beer_small_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_beer_small_name"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/full_strength_beer_small_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_beer_small_volume" />
+
+                            <TextView
+                                android:id="@+id/full_strength_beer_small_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_beer_small_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/full_strength_beer_small_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/full_strength_beer_small_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/full_strength_beer_small_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/full_strength_beer_big"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/full_strength_beer_large_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_beer_large_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/full_strength_beer_large_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_beer_large_volume" />
+
+                            <TextView
+                                android:id="@+id/full_strength_beer_large_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_beer_large_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/full_strength_beer_large_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/full_strength_beer_large_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/full_strength_beer_large_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/mid_strength_beer_smaill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/mid_strength_beer_small_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mid_strength_beer_small_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/mid_strength_beer_small_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mid_strength_beer_small_volume" />
+
+                            <TextView
+                                android:id="@+id/mid_strength_beer_small_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mid_strength_beer_small_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/mid_strength_beer_small_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/mid_strength_beer_small_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/mid_strength_beer_small_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/mid_strength_beer_large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/mid_strength_beer_large_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mid_strength_beer_large_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/mid_strength_beer_large_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mid_strength_beer_large_volume" />
+
+                            <TextView
+                                android:id="@+id/mid_strength_beer_large_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mid_strength_beer_large_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/mid_strength_beer_large_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/mid_strength_beer_large_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/mid_strength_beer_large_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/low_strength_beer_small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/low_strength_beer_small_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/low_strength_beer_small_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/low_strength_beer_small_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/low_strength_beer_small_volume" />
+
+                            <TextView
+                                android:id="@+id/low_strength_beer_small_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/low_strength_beer_small_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/low_strength_beer_small_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/low_strength_beer_small_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/low_strength_beer_small_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/low_strength_beer_large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/low_strength_beer_large_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/low_strength_beer_large_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/low_strength_beer_large_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/low_strength_beer_large_volume" />
+
+                            <TextView
+                                android:id="@+id/low_strength_beer_large_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/low_strength_beer_large_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/low_strength_beer_large_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/low_strength_beer_large_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/low_strength_beer_large_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_message3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/logo"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:id="@+id/wine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/wine_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/wine_background2"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/allWine"
+                        android:layout_width="242dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/wine_title"
+                        android:textColor="@color/background_gray"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/wine_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_arrow_drop_down" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wine_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/average_restaurant_serving_red_wine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_red_wine_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/average_restaurant_serving_red_wine_name"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_red_wine_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/average_restaurant_serving_red_wine_volume" />
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_red_wine_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/average_restaurant_serving_red_wine_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/average_restaurant_serving_red_wine_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_red_wine_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/average_restaurant_serving_red_wine_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/standard_serve_red_wine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/standard_serve_red_wine_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/standard_serve_red_wine_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/standard_serve_red_wine_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/standard_serve_red_wine_volume" />
+
+                            <TextView
+                                android:id="@+id/standard_serve_red_wine_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/standard_serve_red_wine_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/standard_serve_red_wine_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/standard_serve_red_wine_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/standard_serve_red_wine_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/bottle_red_wine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/bottle_red_wine_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/bottle_red_wine_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/bottle_red_wine_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/bottle_red_wine_volume" />
+
+                            <TextView
+                                android:id="@+id/bottle_red_wine_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/bottle_red_wine_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/bottle_red_wine_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/bottle_red_wine_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/bottle_red_wine_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/standard_serve_port"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/standard_serve_port_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/standard_serve_port_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/standard_serve_port_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/standard_serve_port_volume" />
+
+                            <TextView
+                                android:id="@+id/standard_serve_port_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/standard_serve_port_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/standard_serve_port_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/standard_serve_port_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/standard_serve_port_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_message4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/logo"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:id="@+id/white_wine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/white_wine_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/white_wine_background3"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/allWhiteWine"
+                        android:layout_width="242dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/white_wine_title"
+                        android:textColor="@color/background_gray"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/white_wine_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_arrow_drop_down" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/white_wine_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/average_restaurant_serving_white_wine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_white_wine_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/average_restaurant_serving_white_wine_name"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_white_wine_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/average_restaurant_serving_white_wine_volume" />
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_white_wine_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/average_restaurant_serving_white_wine_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/average_restaurant_serving_white_wine_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_white_wine_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/average_restaurant_serving_white_wine_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/standard_serve_white_wine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/standard_serve_white_wine_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/standard_serve_white_wine_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/standard_serve_white_wine_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/standard_serve_white_wine_volume" />
+
+                            <TextView
+                                android:id="@+id/standard_serve_white_wine_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/standard_serve_white_wine_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/standard_serve_white_wine_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/standard_serve_white_wine_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/standard_serve_white_wine_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/bottle_white_wine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/bottle_white_wine_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/bottle_white_wine_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/bottle_white_wine_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/bottle_white_wine_volume" />
+
+                            <TextView
+                                android:id="@+id/bottle_white_wine_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/bottle_white_wine_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/bottle_white_wine_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/bottle_white_wine_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/bottle_white_wine_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_message5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/logo"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:id="@+id/champagne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/champagne_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/champagne_background2"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/allChampagne"
+                        android:layout_width="242dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/champagne_title"
+                        android:textColor="@color/background_gray"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/champagne_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_arrow_drop_down" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/champagne_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/average_restaurant_serving_champagne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_champagne_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/average_restaurant_serving_champagne_name"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_champagne_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/average_restaurant_serving_champagne_volume" />
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_champagne_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/average_restaurant_serving_champagne_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/average_restaurant_serving_champagne_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/average_restaurant_serving_champagne_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/average_restaurant_serving_champagne_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/bottle_champagne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/bottle_champagne_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/bottle_champagne_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/bottle_champagne_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/bottle_champagne_volume" />
+
+                            <TextView
+                                android:id="@+id/bottle_champagne_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/bottle_champagne_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/bottle_champagne_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/bottle_champagne_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/bottle_champagne_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_message6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/logo"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:id="@+id/spirits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/spirits_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/spirits_background2"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/allSpirits"
+                        android:layout_width="242dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/spirits_title"
+                        android:textColor="@color/background_gray"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/spirits_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_arrow_drop_down" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/spirits_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/high_strength_straight_spirits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/high_strength_straight_spirits_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/high_strength_straight_spirits_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/high_strength_straight_spirits_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/high_strength_straight_spirits_volume" />
+
+                            <TextView
+                                android:id="@+id/high_strength_straight_spirits_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/high_strength_straight_spirits_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/high_strength_straight_spirits_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/high_strength_straight_spirits_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/high_strength_straight_spirits_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/full_strength_ready_spirits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/full_strength_ready_spirits_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_ready_spirits_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/full_strength_ready_spirits_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_ready_spirits_volume" />
+
+                            <TextView
+                                android:id="@+id/full_strength_ready_spirits_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_ready_spirits_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/full_strength_ready_spirits_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/full_strength_ready_spirits_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/full_strength_ready_spirits_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/high_strength_ready_spirits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/high_strength_ready_spirits_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/high_strength_ready_spirits_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/high_strength_ready_spirits_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/high_strength_ready_spirits_volume" />
+
+                            <TextView
+                                android:id="@+id/high_strength_ready_spirits_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/high_strength_ready_spirits_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/high_strength_ready_spirits_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/high_strength_ready_spirits_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/high_strength_ready_spirits_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/full_strength_mixed_spirits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/full_strength_mixed_spirits_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_mixed_spirits_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/full_strength_mixed_spirits_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_mixed_spirits_volume" />
+
+                            <TextView
+                                android:id="@+id/full_strength_mixed_spirits_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/full_strength_mixed_spirits_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/full_strength_mixed_spirits_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/full_strength_mixed_spirits_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/full_strength_mixed_spirits_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/high_strength_mixed_spirits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:foreground="?selectableItemBackground"
+                        card_view:cardCornerRadius="12dp"
+                        card_view:cardElevation="30dp"
+                        card_view:contentPadding="4dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/high_strength_mixed_spirits_name"
+                                android:layout_width="33dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/high_strength_mixed_spirits_name"
+                                android:textSize="12dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/high_strength_mixed_spirits_volume"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/high_strength_mixed_spirits_volume" />
+
+                            <TextView
+                                android:id="@+id/high_strength_mixed_spirits_density"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/high_strength_mixed_spirits_density" />
+
+
+                            <ImageButton
+                                android:id="@+id/high_strength_mixed_spirits_minusButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_minus" />
+
+                            <TextView
+                                android:id="@+id/high_strength_mixed_spirits_quantity"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/textview_border"
+                                android:gravity="center"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <ImageButton
+                                android:id="@+id/high_strength_mixed_spirits_addButton"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/white"
+                                card_view:srcCompat="@drawable/ic_add" />
+
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_message7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/logo"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
