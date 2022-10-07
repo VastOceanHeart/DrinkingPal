@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_orange"
     android:orientation="vertical"
     android:scrollbarThumbVertical="@color/button"
     tools:context=".Fragment.InformationFragments.HangoverRemediesInfoFragment">
@@ -11,7 +12,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:background="@drawable/hangover_remedy"
+        android:background="@color/title_orange"
         android:orientation="horizontal">
 
 
@@ -20,7 +21,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.1"
-            android:background="#80CCCCCC"
             android:src="@drawable/ic_back" />
 
         <TextView
@@ -28,7 +28,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.9"
-            android:background="#80CCCCCC"
             android:gravity="center"
             android:text="@string/HangoverRemedyInfoSelectionTitle2"
             android:textColor="@color/deepblue"
@@ -50,7 +49,7 @@
             android:layout_marginLeft="30sp"
             android:layout_marginTop="120sp"
             android:layout_marginRight="30sp"
-            android:background="@color/white"
+            android:background="@color/item_orange"
             android:clickable="true"
             android:focusable="true"
             android:orientation="vertical">
@@ -93,7 +92,7 @@
             android:layout_height="150sp"
             android:layout_marginLeft="30sp"
             android:layout_marginRight="30sp"
-            android:background="@color/white"
+            android:background="@color/item_orange"
             android:clickable="true"
             android:focusable="true"
             android:orientation="vertical">

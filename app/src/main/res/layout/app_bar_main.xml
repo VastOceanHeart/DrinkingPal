@@ -14,10 +14,10 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:titleTextColor="@color/background_gray"
+            app:titleTextColor="@color/deepblue"
             app:titleMarginStart="75dp"
-            android:backgroundTint="@color/logo"
-            app:popupTheme="@style/Theme.NavigationJava.PopupOverlay"></androidx.appcompat.widget.Toolbar>
+            android:backgroundTint="@color/title_orange"
+            app:popupTheme="@style/Theme.NavigationJava.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

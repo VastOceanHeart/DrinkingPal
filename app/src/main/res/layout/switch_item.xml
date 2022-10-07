@@ -17,7 +17,7 @@
             android:layout_width="65sp"
             android:layout_height="wrap_content"
             android:layout_weight="5"
-            android:backgroundTint="@color/hint_gray"
+            android:backgroundTint="@color/title_orange"
             android:ems="10"
             android:gravity="center"
             android:hint="Start"
@@ -39,7 +39,7 @@
             android:layout_width="65sp"
             android:layout_height="wrap_content"
             android:layout_weight="5"
-            android:backgroundTint="@color/hint_gray"
+            android:backgroundTint="@color/title_orange"
             android:ems="10"
             android:gravity="center"
             android:hint="End"
@@ -54,6 +54,8 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_weight="1"
+            android:thumbTint="@color/title_orange"
+            android:trackTint="@color/title_orange"
             tools:ignore="UseSwitchCompatOrMaterialXml" />
 
     </LinearLayout>

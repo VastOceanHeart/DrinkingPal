@@ -23,14 +23,6 @@
 
     </fragment>
     <fragment
-        android:id="@+id/nav_face_rec_fragment"
-        android:name="com.example.drinkingpal.Fragment.FaceRecognitionFragment"
-        android:label="@string/FaceRecFeatureTitle">
-        <action
-            android:id="@+id/action_nav_face_rec_fragment_to_nav_information_fragment"
-            app:destination="@id/nav_information_fragment" />
-    </fragment>
-    <fragment
         android:id="@+id/alcoholTypeInfoFragment"
         android:name="com.example.drinkingpal.Fragment.InformationFragments.AlcoholTypeInfoFragment"
         android:label="@string/AlcoholTypeInfoSelectionTitle"
@@ -75,4 +67,24 @@
             android:id="@+id/action_nav_consequence_fragment_to_nav_information_fragment"
             app:destination="@id/nav_information_fragment" />
     </fragment>
+    <fragment
+        android:id="@+id/nav_achievement_fragment"
+        android:name="com.example.drinkingpal.Fragment.AchievementFragment"
+        android:label="@string/AchievementTitle"
+        tools:layout="@layout/fragment_achievement" >
+
+        <action
+            android:id="@+id/action_nav_achievement_fragment_to_nav_information_fragment"
+            app:destination="@id/nav_information_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_quiz_fragment"
+        android:name="com.example.drinkingpal.Fragment.QuizFragment"
+        android:label="@string/QuizFeatureTitle"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/action_nav_quiz_fragment_to_nav_information_fragment"
+            app:destination="@id/nav_information_fragment" />
+    </fragment>
+
 </navigation>

@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="8sp"
+    android:layout_marginRight="8sp"
+    android:background="@color/background_orange"
     android:orientation="vertical"
     tools:context=".Fragment.CalculatorFragment">
 
@@ -20,7 +23,7 @@
         android:layout_height="76dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:background="@drawable/textview_border"
+        android:background="@drawable/textview_border5"
         android:orientation="horizontal">
 
         <ImageView
@@ -35,11 +38,11 @@
             android:id="@+id/totalStandardDrinkTitle"
             android:layout_width="537dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="8sp"
             android:layout_weight="1"
             android:gravity="fill"
             android:text="@string/Total_Standard_Drink_Title"
             android:textColor="@color/deepblue"
-            android:layout_marginLeft="8sp"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -51,11 +54,11 @@
             android:layout_marginRight="10sp"
             android:layout_marginBottom="6sp"
             android:layout_weight="1"
-            android:background="@drawable/textview_border3"
+            android:background="@drawable/textview_border6"
             android:gravity="center"
-            android:hint="0"
-            android:textColorHint="@color/white"
+            android:hint="0.00"
             android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -73,7 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
-        android:background="@drawable/textview_border"
+        android:background="@drawable/textview_border5"
         android:orientation="vertical">
 
         <LinearLayout
@@ -96,8 +99,8 @@
                 android:id="@+id/recommendationTitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:layout_marginLeft="8sp"
+                android:layout_weight="1"
                 android:gravity="fill"
                 android:text="@string/recommendation_title"
                 android:textColor="@color/deepblue"
@@ -114,7 +117,7 @@
             android:layout_marginLeft="6sp"
             android:layout_marginRight="6sp"
             android:layout_marginBottom="6sp"
-            android:background="@drawable/textview_border3"
+            android:background="@drawable/textview_border6"
             android:orientation="vertical">
 
             <TextView
@@ -134,14 +137,16 @@
 
     <Button
         android:id="@+id/clearButton"
-        android:layout_width="match_parent"
+        android:layout_width="100sp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="300sp"
+        android:layout_gravity="right"
         android:layout_marginRight="4sp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/item_orange"
+        android:gravity="center"
         android:text="Clear"
         android:textColor="@color/deepblue"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="RtlHardcoded" />
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -213,6 +218,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -221,6 +227,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:background="@color/item_orange"
                             android:orientation="horizontal">
 
                             <TextView
@@ -255,7 +262,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -263,7 +270,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -273,7 +280,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -286,6 +293,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -328,7 +336,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -336,7 +344,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -346,7 +354,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -359,6 +367,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -401,7 +410,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -409,7 +418,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -419,7 +428,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -432,6 +441,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -474,7 +484,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -482,7 +492,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -492,7 +502,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -505,6 +515,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -547,7 +558,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -555,7 +566,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -565,7 +576,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -578,6 +589,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -620,7 +632,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -628,7 +640,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -638,7 +650,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -708,6 +720,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -750,7 +763,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -758,7 +771,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -768,7 +781,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -781,6 +794,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -823,7 +837,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -831,7 +845,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -841,7 +855,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -854,6 +868,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -896,7 +911,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -904,7 +919,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -914,7 +929,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -927,6 +942,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -969,7 +985,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -977,7 +993,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -987,7 +1003,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -1057,6 +1073,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -1099,7 +1116,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -1107,7 +1124,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -1117,7 +1134,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -1130,6 +1147,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -1172,7 +1190,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -1180,7 +1198,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -1190,7 +1208,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -1203,6 +1221,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -1245,7 +1264,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -1253,7 +1272,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -1263,7 +1282,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -1333,6 +1352,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -1375,7 +1395,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -1383,7 +1403,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -1393,7 +1413,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -1406,6 +1426,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -1448,7 +1469,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -1456,7 +1477,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -1466,7 +1487,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -1536,6 +1557,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -1578,7 +1600,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -1586,7 +1608,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -1596,7 +1618,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -1609,6 +1631,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -1651,7 +1674,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -1659,7 +1682,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -1669,7 +1692,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -1682,6 +1705,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -1724,7 +1748,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -1732,7 +1756,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -1742,7 +1766,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -1755,6 +1779,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -1797,7 +1822,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -1805,7 +1830,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -1815,7 +1840,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 
@@ -1828,6 +1853,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
+                        android:backgroundTint="@color/item_orange"
                         android:foreground="?selectableItemBackground"
                         card_view:cardCornerRadius="12dp"
                         card_view:cardElevation="30dp"
@@ -1870,7 +1896,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_minus" />
 
                             <TextView
@@ -1878,7 +1904,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@drawable/textview_border"
+                                android:background="@drawable/textview_border5"
                                 android:gravity="center"
                                 android:textSize="30dp"
                                 android:textStyle="bold" />
@@ -1888,7 +1914,7 @@
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:backgroundTint="@color/white"
+                                android:backgroundTint="@color/item_orange"
                                 card_view:srcCompat="@drawable/ic_add" />
 
 

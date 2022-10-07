@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment.AlarmFragment">
+    android:background="@color/background_orange"
+    tools:context=".Fragment.AlarmFragment"
+    android:layout_marginRight="8sp"
+    android:layout_marginLeft="8sp">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -32,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
-                android:background="@drawable/textview_border"
+                android:background="@drawable/textview_border5"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -58,7 +61,7 @@
                         android:layout_marginLeft="8sp"
                         android:layout_weight="1"
                         android:gravity="fill"
-                        android:text="@string/daily_image_title"
+                        android:text="@string/daily_meme_title"
                         android:textColor="@color/deepblue"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -69,13 +72,14 @@
 
                 <ImageView
                     android:id="@+id/dailyImageContent"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="380dp"
+                    android:layout_height="300dp"
                     android:layout_gravity="center"
                     android:layout_marginLeft="4sp"
                     android:layout_marginRight="4sp"
                     android:layout_marginBottom="8sp"
-                    android:src="@drawable/ic_image2" />
+                    android:src="@drawable/ic_image2"
+                    tools:ignore="WebViewLayout" />
 
                 <ImageButton
                     android:id="@+id/downloadImageButton"
@@ -83,7 +87,7 @@
                     android:layout_height="50sp"
                     android:layout_gravity="right"
                     android:layout_marginRight="8sp"
-                    android:backgroundTint="@color/white"
+                    android:backgroundTint="@color/item_orange"
                     android:src="@drawable/ic_dowanload" />
 
             </LinearLayout>
@@ -92,7 +96,8 @@
                 android:id="@+id/blankTextView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/FillWithBlankLine2" />
+                android:text="@string/FillWithBlankLine2"
+                android:visibility="gone"/>
 
 
             <LinearLayout
@@ -101,8 +106,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
-                android:background="@drawable/textview_border"
-                android:orientation="vertical">
+                android:background="@drawable/textview_border5"
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:id="@+id/dailySentenceTitleBox"
@@ -127,7 +133,7 @@
                         android:layout_marginLeft="8sp"
                         android:layout_weight="1"
                         android:gravity="fill"
-                        android:text="@string/daily_sentence_title"
+                        android:text="@string/daily_meme_desc"
                         android:textColor="@color/deepblue"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -207,7 +213,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4sp"
                 android:layout_marginRight="4sp"
-                android:background="@drawable/textview_border"
+                android:background="@drawable/textview_border5"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -264,7 +270,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4sp"
                 android:layout_marginRight="4sp"
-                android:background="@drawable/textview_border"
+                android:background="@drawable/textview_border5"
                 android:orientation="vertical">
 
                 <LinearLayout

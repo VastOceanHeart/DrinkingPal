@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_orange"
     android:orientation="vertical"
     tools:context=".Fragment.InformationFragments.StandardDrinkInfoFragment">
 
@@ -11,7 +12,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:background="@drawable/what_standard_drink"
+        android:background="@color/title_orange"
         android:orientation="horizontal">
 
 
@@ -20,7 +21,6 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0.1"
-            android:background="#80CCCCCC"
             android:src="@drawable/ic_back" />
 
         <TextView
@@ -28,7 +28,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.9"
-            android:background="#80CCCCCC"
             android:gravity="center"
             android:text="@string/StandardDrinkInfoSelectionTitle"
             android:textColor="@color/deepblue"
@@ -66,7 +65,7 @@
                 android:layout_height="210sp"
                 android:layout_marginLeft="6sp"
                 android:layout_marginRight="6sp"
-                android:background="@drawable/textview_border"
+                android:background="@drawable/textview_border5"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -109,7 +108,7 @@
                 android:layout_height="170sp"
                 android:layout_marginLeft="6sp"
                 android:layout_marginRight="6sp"
-                android:background="@drawable/textview_border"
+                android:background="@drawable/textview_border5"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -153,7 +152,7 @@
                 android:layout_marginLeft="6sp"
                 android:layout_marginRight="6sp"
                 android:layout_marginBottom="20sp"
-                android:background="@drawable/textview_border"
+                android:background="@drawable/textview_border5"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -194,6 +193,7 @@
                         card_view:srcCompat="@drawable/ic_guide" />
 
                 </LinearLayout>
+
                 <TextView
                     android:id="@+id/Text3Content"
                     android:layout_width="match_parent"
@@ -211,7 +211,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="4sp"
                     android:layout_marginRight="4sp"
-                    android:backgroundTint="@color/deepblue75"
+                    android:backgroundTint="@color/title_orange"
                     android:text="Go To Standard Drink Calculator"
                     android:textColor="@color/white"
                     android:textStyle="bold" />

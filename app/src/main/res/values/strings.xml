@@ -5,17 +5,40 @@
 
     <string name="FillWithBlankLine">               \n                   </string>
     <string name="FillWithBlankLine2">                                   </string>
+    <string name="FillWithBlankLine3">              \n          \n           </string>
 
     <string name="GoogleAPIkey">AIzaSyA8MmTILjTs1oW96qtkHUPcsTmbTx34UlE</string>
     <string name="SearchEngineID">27e69ad377a5743e7</string>
+
+    //Onboarding screen
+    <string name="OnboardingTitle">Onboarding</string>
+    <string name="ob_heading_one">Alcohol Information</string>
+    <string name="ob_heading_two">Alcohol Consequence</string>
+    <string name="ob_heading_three">Standard Drink Calculator</string>
+    <string name="ob_heading_fourth">Sobriety Reminder</string>
+    <string name="ob_heading_five">Five</string>
+    <string name="ob_heading_six">Six</string>
+    <string name="ob_heading_seven">Seven</string>
+
+    //Description
+    <string name="ob_desc_one">Learn all kinds of information about alcohol and how to drink it safely</string>
+    <string name="ob_desc_two">Learn about the various consequences of drinking alcohol as a way to motivate yourself to control your drinking</string>
+    <string name="ob_desc_three">Use the standard drink calculator to calculate the amount of alcohol to be consumed and get advice to avoid drinking too much</string>
+    <string name="ob_desc_fourth">With a fun meme, a daily reminder to keep your drinking in check</string>
+    <string name="ob_desc_five">Five</string>
+    <string name="ob_desc_six">Six</string>
+    <string name="ob_desc_seven">Seven</string>
+
 
     <!--For menu and navigation-->
     <string name="InformationFeatureTitle">Alcohol Information</string>
     <string name="AlarmFeatureTitle">Drinking Alarm</string>
     <string name="CalculatorFeatureTitle">Drinking Calculator</string>
     <string name="FaceRecFeatureTitle">Drinking Recognition</string>
+    <string name="QuizFeatureTitle">Drinking Quiz</string>
     <string name="ConsequenceTitle">Drink Consequence</string>
     <string name="ReminderTitle">Sobriety Reminder</string>
+    <string name="AchievementTitle">Achievement</string>
 
     <!--For Alcohol Information Fragment and its child fragments-->
     <!--Standard Drink Info-->
@@ -222,14 +245,14 @@
 
     <!--For Alarm Fragment-->
     <string name="purpose_title"><b>What is this?</b></string>
-    <string name="purpose" >This Sobriety Reminder aims to provide you with occasional one-sentence tips in a period of time you specify on how to control your drinking to help you strengthen your resolve and will to control your drinking, with the added benefit of helping you collect beautiful sentences.</string>
+    <string name="purpose">This Sobriety Reminder aims to provide you with occasional Meme tips in a period of time you specify on how to control your drinking to help you strengthen your resolve and will to control your drinking, with the added benefit of helping you collect funny Meme about alcohol</string>
     <string name="explain_title"><b>How it works?</b></string>
     <string name="explain">1. Click <b>Start</b> and <b>End</b> button to select your favorite reminding time range.\n\n2. Turn on the switch.\n\n3. Done! We will push you the notification at your selected time range.</string>
     <string name="drink_time_title"><b>You have been drinking for</b></string>
     <string name="drink_recommendation_title"><b>Recommendation</b></string>
-    <string name="daily_sentence_title"><b>Today Favorite Sentence</b></string>
+    <string name="daily_meme_desc"><b>Meme description</b></string>
     <string name="daily_sentence_hint"><i>Once you click on the notification card, your selected favourite sentence will be displayed here</i></string>
-    <string name="daily_image_title"><b>Today Favorite Image</b></string>
+    <string name="daily_meme_title"><b>Today\'s Meme</b></string>
 
 
     <!--For Consequence Fragment and its child fragments-->
@@ -264,9 +287,52 @@
     <string name="Alcohol_poison_title"><b>Alcohol Poisoning</b></string>
     <string name="Alcohol_poison">When drinking a lot of alcohol, the central nervous system is impacted, which slows heart and breathing rate. Additionally, it disrupts the gag reflex. If the drinker drops out from too much drinking, this raises the possibility of choking on vomit.\n\nAlcohol poisoning may be present in someone if they become disoriented, vomit, have a seizure, have pale complexion, or pass out. The followings are the potential symptoms:\n\n·Seizure\n\n·Vomiting\n\n·Confusion\n\n·Unconsciousness\n\n·Very slow breathing rate\n\n·Unresponsiveness</string>
     <string name="Alcoholism_title"><b>Alcoholism </b></string>
-    <string name="Alcoholism">The word "alcoholism" is frequently applied to more serious alcohol use disorders. Some common symptoms of this disease are:\n\n<b>Craving:</b> The person has an extreme hunger for drinking.\n\n<b>Loss of control: </b>Once the person starts drinking, stopping becomes difficult. They might be unable to refrain from drinking or limit their consumption.\n\n<b>Tolerance: </b>To feel the effects of alcohol, the person needs to consume more of it.\n\n<b>Less consciousness: </b>The effects of their prolonged drinking are hidden from them.\n\nMany sufferers of severe AUD are unable to quit drinking on their own. With their condition, they require outside assistance.\n\nOur application seeks to help older teenagers to consume alcohol responsibly.
-
-</string>
+    <string name="Alcoholism">The word "alcoholism" is frequently applied to more serious alcohol use disorders. Some common symptoms of this disease are:\n\n<b>Craving:</b> The person has an extreme hunger for drinking.\n\n<b>Loss of control: </b>Once the person starts drinking, stopping becomes difficult. They might be unable to refrain from drinking or limit their consumption.\n\n<b>Tolerance: </b>To feel the effects of alcohol, the person needs to consume more of it.\n\n<b>Less consciousness: </b>The effects of their prolonged drinking are hidden from them.\n\nMany sufferers of severe AUD are unable to quit drinking on their own. With their condition, they require outside assistance.\n\nOur application seeks to help older teenagers to consume alcohol responsibly.</string>
 
 
+    <!--Drinking quiz-->
+    <string name="quiz_title">Am I Drinking Too Much?</string>
+    <string name="quiz_description">It\'s just a social event, I\'m just celebrating this week; I\'m sorry I\'m too stressed, so I\'d like to have a few drinks; you can always find a good excuse to drink.\n\nDon\'t make alcohol consumption a habit, find out how it impacts your life.\n\nWith this short quiz, you will find out if your drinking habit has negatively impacted your life, and wha you can do to make a change.</string>
+    <string name="quiz_prompt"><i>Select "Yes" if this statement applies to you</i></string>
+    <string name="take_the_quiz">Take the quiz</string>
+    <string name="restart_the_quiz">Take Quiz Again</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string-array name="quiz_titles">
+        <item><b>Quiz 1</b></item>
+        <item><b>Quiz 2</b></item>
+        <item><b>Quiz 3</b></item>
+        <item><b>Quiz 4</b></item>
+        <item><b>Quiz 5</b></item>
+        <item><b>Quiz 6</b></item>
+        <item><b>Quiz 7</b></item>
+        <item><b>Quiz 8</b></item>
+        <item><b>Quiz 9</b></item>
+        <item><b>Quiz 10</b></item>
+        <item><b>Quiz 11</b></item>
+        <item><b>Quiz 12</b></item>
+        <item><b>Quiz 13</b></item>
+    </string-array>
+
+    <string-array name="quizs">
+        <item>In more than one case, I\'ve consumed more alcohol or drank for a longer time than I intended.</item>
+        <item>Once I start drinking, I can\'t limit how much I drink.</item>
+        <item>It has been difficult for me to cut down or stop drinking more than once.</item>
+        <item>I drink a lot and am hung over most of the time.</item>
+        <item>There were times, it was impossible to think of anything else I just needed a drink.</item>
+        <item>As a result of my drinking and hangovers, I have been unable to attend home, school, work or my family.</item>
+        <item>Despite the fact that it was causing problems with my relationships, I continued to drink.</item>
+        <item>Drinking has forced me to give up activities/hobbies that matter to me and my wellbeing.</item>
+        <item>In the past, I have done things that increased my chances of getting hurt when I was drinking, such as driving and swimming after drinking.</item>
+        <item>The drinking has caused depression and anxiety symptoms in me, but I continue to do it anyway.</item>
+        <item>Over the course of a few drinks, I\'ve blacked out or forgotten what happened.</item>
+        <item>My tolerance to alcohol has increased over time as I have drank more.</item>
+        <item>After not drinking for a period of time, I\'ve experienced withdrawal symptoms, including sleep problems, agitation, anxiety, depression, restlessness, nausea.The symptoms have been avoided by drinking.</item>
+    </string-array>
+
+    <string name="quiz_result_title"><b>Your Result:</b></string>
+    <string name="quiz_result1">You do not demonstrate any of the symptoms associated with problematic drinking according to a clinical definition. In any case, you should feel free to skip drinking alcohol if you feel that it is negatively affecting your wellbeing or life in anyway.</string>
+    <string name="quiz_result2">You may have a mild drinking problem, or "Grey Area Drinking." We recommend starting a personalized program to either reduce or eliminate your drinking.</string>
+    <string name="quiz_result3">You may have a moderarte drinking problem. We recommend you try to stop drinking excessive alcohol and seek help from medical experts when possible.</string>
+    <string name="quiz_result4">It is likely that you suffer from an Alcohol Use Disorder. For more information on treatment for Alcohol Use Disorder, please contact a licensed mental health professional.</string>
 </resources>

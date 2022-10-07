@@ -9,10 +9,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,13 +21,11 @@ import androidx.work.WorkerParameters;
 
 import com.example.drinkingpal.MainActivity;
 import com.example.drinkingpal.R;
-import com.example.drinkingpal.retrofit.GoogleImageRetrofitClient;
-import com.example.drinkingpal.retrofit.GoogleImageRetrofitInterface;
-import com.example.drinkingpal.retrofit.Items;
-import com.example.drinkingpal.retrofit.SearchResponse;
+import com.example.drinkingpal.retrofit.MemeResponse;
+import com.example.drinkingpal.retrofit.MemeRetrofitClient;
+import com.example.drinkingpal.retrofit.MemeRetrofitInterface;
 
 import java.net.URL;
-import java.util.List;
 import java.util.Random;
 
 import retrofit2.Call;
@@ -37,9 +33,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SobrietyReminderWorker extends Worker {
-
-    private static final String API_KEY = "AIzaSyA8MmTILjTs1oW96qtkHUPcsTmbTx34UlE";
-    private static final String SEARCH_ID_cx = "27e69ad377a5743e7";
     private final Random randomBuilder;
     private NotificationCompat.Builder builder;
 
@@ -84,9 +77,9 @@ public class SobrietyReminderWorker extends Worker {
         //Configuring click redirection for notification
 //        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://sentence.yourdictionary.com/alcohol"));
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("DrinkingPalSharedPreferences",getApplicationContext().MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("DrinkingPalSharedPreferences", getApplicationContext().MODE_PRIVATE);
         SharedPreferences.Editor spEditor = sharedPreferences.edit();
-        spEditor.putString("targetFragment","alarmFragment");
+        spEditor.putString("targetFragment", "alarmFragment");
         spEditor.apply();
 
         PendingIntent pi;
@@ -101,39 +94,40 @@ public class SobrietyReminderWorker extends Worker {
         builder = new NotificationCompat.Builder(getApplicationContext(), "Sobriety Reminder");
         builder.setContentTitle("Sobriety Reminder");
 
-        String dailySentence = "One less glass of wine a day keeps the doctor away";
-        builder.setContentText(dailySentence);
+        final String[] dailySentence = {"One less glass of wine a day keeps the doctor away"};
+        builder.setContentText(dailySentence[0]);
 
         //Pass the sentence of the day into the alarmFragment display box
-        spEditor.putString("dailySentence",dailySentence);
+        spEditor.putString("dailySentence", dailySentence[0]);
         spEditor.apply();
 
         builder.setSmallIcon(R.mipmap.app_image_autofix);
         builder.setAutoCancel(true);
         builder.setContentIntent(pi);
+        MemeRetrofitInterface memeRetrofitInterface = MemeRetrofitClient.getRetrofitService();
 
-        //Initial the retrofit to interact with google Custom Search API
-        GoogleImageRetrofitInterface googleImageRetrofitInterface = GoogleImageRetrofitClient.getRetrofitService();
-        String keyword = "no alcohol meme";
-
-        //Search keyword related images via google Custom Search API
-        Call<SearchResponse> googleImageCallAsync =
-                googleImageRetrofitInterface.customSearch(API_KEY, SEARCH_ID_cx, keyword, "image", 10, randomBuilder.nextInt(175));
+        int max = 49;
+        int min = 11;
+        Call<MemeResponse> memeCallAsync = memeRetrofitInterface.customSearch(randomBuilder.nextInt((max - min) + 1) + min);
 
         //After callback, config the notification
-        googleImageCallAsync.enqueue(new Callback<SearchResponse>() {
+        memeCallAsync.enqueue(new Callback<MemeResponse>() {
             @Override
-            public void onResponse(@NonNull Call<SearchResponse> imageCall, @NonNull Response<SearchResponse> imageResponse) {
+            public void onResponse(@NonNull Call<MemeResponse> memeCall, @NonNull Response<MemeResponse> memeResponse) {
                 //If the image url is successfully retrieved, it will be used as the large icon part of the notification
-                if (imageResponse.isSuccessful()) {
+                if (memeResponse.isSuccessful()) {
 
                     //Get the image link from api
-                    assert imageResponse.body() != null;
-                    List<Items> list = imageResponse.body().items;
-                    String link = list.get(randomBuilder.nextInt(9)).getLink();
+                    assert memeResponse.body() != null;
+                    dailySentence[0] = memeResponse.body().getTexts().toString();
+                    builder.setContentText(dailySentence[0]);
+                    spEditor.putString("dailySentence", dailySentence[0]);
+                    spEditor.apply();
+
+                    String link = memeResponse.body().getUrl();
                     new ConvertUrlToBitmap().execute(link);
 
-                    spEditor.putString("reminderImageLink",link);
+                    spEditor.putString("reminderImageLink", link);
                     spEditor.apply();
                 }
                 //If the daily api limit is exceeded, large images will not be downloaded
@@ -144,13 +138,12 @@ public class SobrietyReminderWorker extends Worker {
             }
 
             @Override
-            public void onFailure(@NonNull Call<SearchResponse> call, @NonNull Throwable t) {
+            public void onFailure(@NonNull Call<MemeResponse> call, @NonNull Throwable t) {
                 Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
                 NotificationManagerCompat notificationManCom = NotificationManagerCompat.from(getApplicationContext());
                 notificationManCom.notify(1, builder.build());
             }
         });
-
 
     }
 

@@ -37,10 +37,9 @@
                     android:icon="@drawable/ic_calculate"
                     android:title="@string/CalculatorFeatureTitle" />
                 <item
-                    android:id="@+id/nav_face_rec_fragment"
-                    android:icon="@drawable/ic_face"
-                    android:title="@string/FaceRecFeatureTitle" />
-
+                    android:id="@+id/nav_quiz_fragment"
+                    android:icon="@drawable/ic_quiz"
+                    android:title="@string/QuizFeatureTitle" />
             </group>
         </menu>
     </item>
@@ -63,5 +62,22 @@
         </menu>
     </item>
 
-
+    <item android:title="Other">
+        <menu>
+            <group
+                android:id="@+id/OtherItems"
+                android:checkableBehavior="single"
+                android:enabled="true"
+                android:visible="true">
+                <item
+                    android:id="@+id/nav_achievement_fragment"
+                    android:icon="@drawable/ic_trophy"
+                    android:title="@string/AchievementTitle" />
+                <item
+                    android:id="@+id/nav_onboarding_activity"
+                    android:icon="@drawable/ic_onboarding"
+                    android:title="@string/OnboardingTitle" />
+            </group>
+        </menu>
+    </item>
 </menu>

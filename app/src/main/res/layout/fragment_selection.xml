@@ -3,7 +3,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_gray"
+    android:background="@color/background_orange"
     android:orientation="vertical">
 
     <TextView
@@ -25,7 +25,7 @@
             android:layout_marginLeft="10sp"
             android:layout_marginRight="5sp"
             android:layout_weight="1"
-            android:background="@color/white"
+            android:background="@color/background_orange"
             android:clickable="true"
             android:orientation="vertical">
 
@@ -41,6 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
+                android:background="@color/item_orange"
                 android:gravity="center"
                 android:text="@string/StandardDrinkInfoSelection"
                 android:textColor="@color/deepblue"
@@ -53,10 +54,10 @@
             android:id="@+id/alcoholTypeInfoLinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="280dp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginRight="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="10sp"
             android:layout_weight="1"
-            android:background="@color/white"
+            android:background="@color/background_orange"
             android:clickable="true"
             android:orientation="vertical">
 
@@ -72,6 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
+                android:background="@color/item_orange"
                 android:gravity="center"
                 android:text="@string/AlcoholTypeInfoSelection"
                 android:textColor="@color/deepblue"
@@ -100,7 +102,7 @@
             android:layout_marginLeft="10sp"
             android:layout_marginRight="5sp"
             android:layout_weight="1"
-            android:background="@color/white"
+            android:background="@color/background_orange"
             android:clickable="true"
             android:orientation="vertical">
 
@@ -116,6 +118,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
+                android:background="@color/item_orange"
                 android:gravity="center"
                 android:text="@string/HangoverRemedyInfoSelection2"
                 android:textColor="@color/deepblue"
@@ -127,10 +130,10 @@
             android:id="@+id/quitDrinkingTimelineInfoLinearLayout"
             android:layout_width="wrap_content"
             android:layout_height="280dp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginRight="5sp"
+            android:layout_marginLeft="5sp"
+            android:layout_marginRight="10sp"
             android:layout_weight="1"
-            android:background="@color/white"
+            android:background="@color/background_orange"
             android:clickable="true"
             android:orientation="vertical">
 
@@ -146,6 +149,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
+                android:background="@color/item_orange"
                 android:gravity="center"
                 android:text="@string/QuitDrinkingTimelineInfoSelection"
                 android:textColor="@color/deepblue"

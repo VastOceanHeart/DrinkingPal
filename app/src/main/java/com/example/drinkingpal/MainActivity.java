@@ -2,11 +2,13 @@ package com.example.drinkingpal;
 
 import android.annotation.SuppressLint;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -75,8 +77,34 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
+
+//        //Extend the duration of launch page
+//        long startTime = System.currentTimeMillis();
+//        view.getViewTreeObserver().addOnPreDrawListener(
+//                new ViewTreeObserver.OnPreDrawListener() {
+//                    @Override
+//                    public boolean onPreDraw() {
+//                        long endTime = System.currentTimeMillis();
+//                        long runTime = endTime - startTime;
+//
+//                        //The duration of launch page (in ms)
+//                        long duration = 2000;
+//
+//                        // Check if the initial data is ready.
+//                        if (runTime > duration) {
+//                            // The content is ready; start drawing.
+//                            view.getViewTreeObserver().removeOnPreDrawListener(this);
+//                            return true;
+//                        } else {
+//                            //Suspend to the setting duration.
+//                            return false;
+//                        }
+//                    }
+//                });
+
         setContentView(view);
 
+        //Used to control the back button for home fragment
         BackPressedTwice = false;
 
         //Interactive with the room
@@ -87,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(binding.appBar.toolbar);
 
         //Configure the navigation drawer
-        appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_information_fragment, R.id.timed_sobriety_reminder_switch, R.id.nav_calculator_fragment, R.id.nav_face_rec_fragment, R.id.nav_consequence_fragment)
+        appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_information_fragment, R.id.timed_sobriety_reminder_switch, R.id.nav_calculator_fragment, R.id.nav_quiz_fragment, R.id.nav_consequence_fragment,R.id.nav_achievement_fragment)
                 .setOpenableLayout(binding.drawerLayout).build();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -113,17 +141,6 @@ public class MainActivity extends AppCompatActivity {
             default:
                 break;
         }
-
-
-        /*
-        Set the navigation drawer's header to current user name
-
-        Gobeze, B. (2016). How to change text of a TextView in navigation drawer header?. Retrieved 6 May 2022, from https://stackoverflow.com/questions/34973456/how-to-change-text-of-a-textview-in-navigation-drawer-header
-        */
-//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        View headerView = navigationView.getHeaderView(0);
-//        TextView currentUserName = (TextView) headerView.findViewById(R.id.currentAppUserName);
-//        currentUserName.setText("Catalogue");
     }
 
 
@@ -131,8 +148,23 @@ public class MainActivity extends AppCompatActivity {
      * Config items in navigation drawer menu
      */
     private void configMenu(View view) {
-        NavigationView navigationView = binding.navView;
 
+        NavigationView navigationView = binding.navView;
+        SharedPreferences sharedPreferences = this.getSharedPreferences("DrinkingPalSharedPreferences", MODE_PRIVATE);
+
+        /*
+         *Config the onboarding
+         */
+        MenuItem onboarding = navigationView.getMenu().findItem(R.id.nav_onboarding_activity);
+        onboarding.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent i = new Intent(MainActivity.this, OnboardingActivity.class);
+                sharedPreferences.edit().putBoolean("onboarding", false).apply();
+                startActivity(i);
+                return false;
+            }
+        });
 
         /*
          * Config the sobriety reminder switch
@@ -145,7 +177,6 @@ public class MainActivity extends AppCompatActivity {
         Button endingTimeBtn = ((Button) sobrietyReminder.getActionView().findViewById(R.id.endingTime));
 
         //The timed reminder is also maintained after a click in from a notification
-        SharedPreferences sharedPreferences = this.getSharedPreferences("DrinkingPalSharedPreferences", MODE_PRIVATE);
         String targetFragment = sharedPreferences.getString("targetFragment", "main");
         if (targetFragment.equals("alarmFragment")) {
             sobrietyReminderSwitch.setChecked(true);
@@ -218,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
                             for (int currentRemindTimes = 0; currentRemindTimes < remindTimes; currentRemindTimes++)
                                 scheduleNotification(view, starting, ending);
 
-                            //Only for test
+//                            Only for test
 //                            WorkRequest firstTImeWorkRequest = new OneTimeWorkRequest.Builder(SobrietyReminderWorker.class)
 //                                    .build();
 //
@@ -332,7 +363,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (Navigation.findNavController(this, R.id.nav_host_fragment)
-                .getCurrentDestination().getId() == R.id.nav_information_fragment && BackPressedTwice == false) {
+                .getCurrentDestination().getId() == R.id.nav_information_fragment && !BackPressedTwice) {
             //If the user is already in the home page (home fragment), the system will reject his request to continue back
             Toast.makeText(this, "Press once more to exit DrinkingPai", Toast.LENGTH_LONG).show();
             BackPressedTwice = true;
