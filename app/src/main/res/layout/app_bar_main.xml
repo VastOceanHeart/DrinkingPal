@@ -14,9 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:titleTextColor="@color/deepblue"
+            app:titleTextColor="@color/white"
             app:titleMarginStart="75dp"
-            android:backgroundTint="@color/title_orange"
+            android:backgroundTint="@color/title_gray"
             app:popupTheme="@style/Theme.NavigationJava.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>

@@ -12,21 +12,21 @@
 
     //Onboarding screen
     <string name="OnboardingTitle">Onboarding</string>
-    <string name="ob_heading_one">Alcohol Information</string>
-    <string name="ob_heading_two">Alcohol Consequence</string>
-    <string name="ob_heading_three">Standard Drink Calculator</string>
-    <string name="ob_heading_fourth">Sobriety Reminder</string>
-    <string name="ob_heading_five">Five</string>
-    <string name="ob_heading_six">Six</string>
-    <string name="ob_heading_seven">Seven</string>
+    <string name="ob_heading_one">Standard Drink Calculator</string>
+    <string name="ob_heading_two">Drinking Quiz</string>
+    <string name="ob_heading_three">Sobriety Reminder</string>
+    <string name="ob_heading_four">Alcohol Information</string>
+    <string name="ob_heading_five">Alcohol Consequence</string>
+    <string name="ob_heading_six">Drink Data</string>
+
 
     //Description
-    <string name="ob_desc_one">Learn all kinds of information about alcohol and how to drink it safely</string>
-    <string name="ob_desc_two">Learn about the various consequences of drinking alcohol as a way to motivate yourself to control your drinking</string>
-    <string name="ob_desc_three">Use the standard drink calculator to calculate the amount of alcohol to be consumed and get advice to avoid drinking too much</string>
-    <string name="ob_desc_fourth">With a fun meme, a daily reminder to keep your drinking in check</string>
-    <string name="ob_desc_five">Five</string>
-    <string name="ob_desc_six">Six</string>
+    <string name="ob_desc_one">Use the standard drink calculator to calculate the amount of alcohol to be consumed and get advice to avoid drinking too much</string>
+    <string name="ob_desc_two">Answer thirteen quiz to quickly know if I am currently under the influence of alcohol</string>
+    <string name="ob_desc_three">With a fun meme, a daily reminder to keep your drinking in check</string>
+    <string name="ob_desc_four">Learn all kinds of information about alcohol and how to drink it safely</string>
+    <string name="ob_desc_five">Learn about the various consequences of drinking alcohol as a way to motivate yourself to control your drinking</string>
+    <string name="ob_desc_six">Official figures from Australia to give you an idea of how badly alcohol is currently affecting young people</string>
     <string name="ob_desc_seven">Seven</string>
 
 
@@ -37,6 +37,7 @@
     <string name="FaceRecFeatureTitle">Drinking Recognition</string>
     <string name="QuizFeatureTitle">Drinking Quiz</string>
     <string name="ConsequenceTitle">Drink Consequence</string>
+    <string name="DataTitle">Drink Data</string>
     <string name="ReminderTitle">Sobriety Reminder</string>
     <string name="AchievementTitle">Achievement</string>
 
@@ -111,8 +112,8 @@
     <string name="Hair">The hair of a dog is not the hair of a dog. It is an alcoholic drink that can help you recover from a hangover. Though the hair of a dog can be helpful, it can only relieve it for a short amount of time. Please use it with caution.</string>
 
     <!--Quit Drinking Timeline Info-->
-    <string name="QuitDrinkingTimelineInfoSelection">Quit Drinking Timeline</string>
-    <string name="QuitDrinkingTimelineInfoSelectionTitle">Quit Drinking Timeline</string>
+    <string name="QuitDrinkingTimelineInfoSelection">Recovery Timeline</string>
+    <string name="QuitDrinkingTimelineInfoSelectionTitle">Recovery Timeline</string>
     <string name="Twelve_hour_title"><b>12 hours</b></string>
     <string name="Twelve_hour">Withdrawal symptoms appear, possible shaking, vomiting, sweating, mania, and anxiety.</string>
 
@@ -292,7 +293,7 @@
 
     <!--Drinking quiz-->
     <string name="quiz_title">Am I Drinking Too Much?</string>
-    <string name="quiz_description">It\'s just a social event, I\'m just celebrating this week; I\'m sorry I\'m too stressed, so I\'d like to have a few drinks; you can always find a good excuse to drink.\n\nDon\'t make alcohol consumption a habit, find out how it impacts your life.\n\nWith this short quiz, you will find out if your drinking habit has negatively impacted your life, and wha you can do to make a change.</string>
+    <string name="quiz_description">It\'s just a social event, I\'m just celebrating this week; I\'m sorry I\'m too stressed, so I\'d like to have a few drinks; you can always find a good excuse to drink.\n\nDon\'t make alcohol consumption a habit, find out how it impacts your life.\n\nWith this short quiz, you will find out if your drinking habit has negatively impacted your life, and what you can do to make a change.</string>
     <string name="quiz_prompt"><i>Select "Yes" if this statement applies to you</i></string>
     <string name="take_the_quiz">Take the quiz</string>
     <string name="restart_the_quiz">Take Quiz Again</string>
@@ -335,4 +336,17 @@
     <string name="quiz_result2">You may have a mild drinking problem, or "Grey Area Drinking." We recommend starting a personalized program to either reduce or eliminate your drinking.</string>
     <string name="quiz_result3">You may have a moderarte drinking problem. We recommend you try to stop drinking excessive alcohol and seek help from medical experts when possible.</string>
     <string name="quiz_result4">It is likely that you suffer from an Alcohol Use Disorder. For more information on treatment for Alcohol Use Disorder, please contact a licensed mental health professional.</string>
+
+    <!--Achievement-->
+    <string name="meme_beginner_title"><b>Memes Beginner</b></string>
+    <string name="meme_beginner">View Memes Once</string>
+    <string name="meme_star_title"><b>Memes Star</b></string>
+    <string name="meme_star">1 Memes Downloaded</string>
+    <string name="meme_super_title"><b>Memes Super</b></string>
+    <string name="meme_super">10 Memes Downloaded</string>
+    <string name="meme_expert_title"><b>Memes Expert</b></string>
+    <string name="meme_expert">25 Memes Downloaded</string>
+    <string name="meme_master_title"><b>Memes Master</b></string>
+    <string name="meme_master">50 Memes Downloaded</string>
+
 </resources>

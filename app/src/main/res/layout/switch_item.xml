@@ -4,13 +4,34 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8sp"
+        android:layout_marginTop="8sp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_alarm" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="How to use this" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginLeft="16sp">
 
         <Button
             android:id="@+id/startingTime"
@@ -53,7 +74,9 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="16sp"
             android:layout_weight="1"
+            android:minHeight="48dp"
             android:thumbTint="@color/title_orange"
             android:trackTint="@color/title_orange"
             tools:ignore="UseSwitchCompatOrMaterialXml" />

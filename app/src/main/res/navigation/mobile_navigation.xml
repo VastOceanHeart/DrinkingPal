@@ -3,15 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_information_fragment">
+    app:startDestination="@id/nav_calculator_fragment">
     <fragment
         android:id="@+id/nav_calculator_fragment"
         android:name="com.example.drinkingpal.Fragment.CalculatorFragment"
-        android:label="@string/CalculatorFeatureTitle" >
-        <action
-            android:id="@+id/action_nav_calculator_fragment_to_nav_information_fragment"
-            app:destination="@id/nav_information_fragment" />
-    </fragment>
+        android:label="@string/CalculatorFeatureTitle" />
     <fragment
         android:id="@+id/nav_information_fragment"
         android:name="com.example.drinkingpal.Fragment.InformationFragment"
@@ -19,72 +15,48 @@
     <fragment
         android:id="@+id/timed_sobriety_reminder_switch"
         android:name="com.example.drinkingpal.Fragment.AlarmFragment"
-        android:label="@string/ReminderTitle" >
+        android:label="@string/ReminderTitle">
 
     </fragment>
     <fragment
         android:id="@+id/alcoholTypeInfoFragment"
         android:name="com.example.drinkingpal.Fragment.InformationFragments.AlcoholTypeInfoFragment"
         android:label="@string/AlcoholTypeInfoSelectionTitle"
-        tools:layout="@layout/fragment_alcohol_type_info" >
-        <action
-            android:id="@+id/action_alcoholTypeInfoFragment_to_nav_information_fragment"
-            app:destination="@id/nav_information_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_alcohol_type_info" />
     <fragment
         android:id="@+id/standardDrinkInfoFragment"
         android:name="com.example.drinkingpal.Fragment.InformationFragments.StandardDrinkInfoFragment"
         android:label="@string/StandardDrinkInfoSelection"
-        tools:layout="@layout/fragment_standard_drink_info" >
-        <action
-            android:id="@+id/action_standardDrinkInfoFragment_to_nav_information_fragment"
-            app:destination="@id/nav_information_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_standard_drink_info" />
     <fragment
         android:id="@+id/quitDrinkingTimelineInfoFragment"
         android:name="com.example.drinkingpal.Fragment.InformationFragments.QuitDrinkingTimelineInfoFragment"
         android:label="@string/QuitDrinkingTimelineInfoSelection"
-        tools:layout="@layout/fragment_quit_drinking_timeline_info" >
-        <action
-            android:id="@+id/action_quitDrinkingTimelineInfoFragment_to_nav_information_fragment"
-            app:destination="@id/nav_information_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_quit_drinking_timeline_info" />
     <fragment
         android:id="@+id/hangoverRemediesInfoFragment"
         android:name="com.example.drinkingpal.Fragment.InformationFragments.HangoverRemediesInfoFragment"
         android:label="@string/HangoverRemedyInfoSelection"
-        tools:layout="@layout/fragment_hangover_remedies_info" >
-        <action
-            android:id="@+id/action_hangoverRemediesInfoFragment_to_nav_information_fragment"
-            app:destination="@id/nav_information_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_hangover_remedies_info" />
     <fragment
         android:id="@+id/nav_consequence_fragment"
         android:name="com.example.drinkingpal.Fragment.ConsequenceFragment"
         android:label="@string/ConsequenceTitle"
-        tools:layout="@layout/fragment_consequence" >
-        <action
-            android:id="@+id/action_nav_consequence_fragment_to_nav_information_fragment"
-            app:destination="@id/nav_information_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_consequence" />
     <fragment
         android:id="@+id/nav_achievement_fragment"
         android:name="com.example.drinkingpal.Fragment.AchievementFragment"
         android:label="@string/AchievementTitle"
-        tools:layout="@layout/fragment_achievement" >
-
-        <action
-            android:id="@+id/action_nav_achievement_fragment_to_nav_information_fragment"
-            app:destination="@id/nav_information_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_achievement" />
     <fragment
         android:id="@+id/nav_quiz_fragment"
         android:name="com.example.drinkingpal.Fragment.QuizFragment"
         android:label="@string/QuizFeatureTitle"
-        tools:layout="@layout/fragment_quiz" >
-        <action
-            android:id="@+id/action_nav_quiz_fragment_to_nav_information_fragment"
-            app:destination="@id/nav_information_fragment" />
-    </fragment>
+        tools:layout="@layout/fragment_quiz" />
+    <fragment
+        android:id="@+id/nav_data_fragment"
+        android:name="com.example.drinkingpal.Fragment.AlcoholDataFragment"
+        android:label="@string/DataTitle"
+        tools:layout="@layout/fragment_alcohol_data" />
 
 </navigation>

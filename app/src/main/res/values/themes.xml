@@ -33,9 +33,15 @@
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <!-- Customize your theme here. -->
         <!--Launch page-->
-        <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/background_orange</item>
-        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">@mipmap/drinkingpal_logo_autofix_round</item>
-        <item name="android:windowSplashScreenBrandingImage" tools:targetApi="s">@drawable/launch_content</item>
+        <item name="android:windowSplashScreenBackground" tools:targetApi="s">
+            @color/background_orange
+        </item>
+        <item name="android:windowSplashScreenAnimatedIcon" tools:targetApi="s">
+            @mipmap/drinkingpal_logo_autofix_round
+        </item>
+        <item name="android:windowSplashScreenBrandingImage" tools:targetApi="s">
+            @drawable/launch_content
+        </item>
         <item name="android:windowBackground" tools:targetApi="Q">@drawable/splash</item>
 
         <!--Put our team logo here
@@ -45,7 +51,7 @@
     <!--The hamburger icon in Tool bar-->
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
-        <item name="color">@color/deepblue</item>
+        <item name="color">@color/white</item>
     </style>
 
     <style name="Theme.NavigationJava.NoActionBar">
@@ -53,7 +59,21 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.NavigationJava.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!--The style for time picker-->
+    <style name="TimePicker" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:windowIsFloating">true</item>
+        <item name="colorPrimary">@color/deepblue</item>
+        <item name="colorAccent">@color/title_orange</item>
+    </style>
 
+    <!--The style for time AlertDialog-->
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:background">@color/title_orange</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="Theme.NavigationJava.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.NavigationJava.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
 </resources>

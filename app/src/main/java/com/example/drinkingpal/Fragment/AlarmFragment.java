@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -18,6 +19,8 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -35,25 +38,28 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.time.LocalDate;
 import java.util.concurrent.ExecutionException;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class AlarmFragment extends Fragment {
     private FragmentAlarmBinding alarmBinding;
     private SharedPreferences sharedPreferences;
     private static final int REQUEST_CODE = 01;
 
     public AlarmFragment() {
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         alarmBinding = FragmentAlarmBinding.inflate(inflater, container, false);
         View view = alarmBinding.getRoot();
-
         sharedPreferences = getContext().getSharedPreferences("DrinkingPalSharedPreferences", getContext().MODE_PRIVATE);
-
         String targetFragment = sharedPreferences.getString("dailySentence", null);
         String alarmImageUrl = sharedPreferences.getString("reminderImageLink", null);
+        boolean viewMemeOneTime = sharedPreferences.getBoolean("viewMemeOneTime", false);
+
 
         if (targetFragment != null) {
             alarmBinding.dailySentenceContent.setText(targetFragment);
@@ -61,11 +67,19 @@ public class AlarmFragment extends Fragment {
 
         if (alarmImageUrl != null) {
             Glide.with(this).load(alarmImageUrl).into(alarmBinding.dailyImageContent);
-//
-//            //load the gif from url into webview
-//            alarmBinding.dailyImageContent.loadUrl(alarmImageUrl);
-//            alarmBinding.dailyImageContent.getSettings().setUseWideViewPort(true);
-//            alarmBinding.dailyImageContent.getSettings().setLoadWithOverviewMode(true);
+
+            //First time view a meme will get a achievement
+            if (!viewMemeOneTime) {
+                sharedPreferences.edit().putBoolean("viewMemeOneTime", true).apply();
+                AlertDialog achievementPrompt = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyle)
+                        .setTitle("Achievement")
+                        .create();
+                achievementPrompt.setMessage("Obtain \"Meme Beginner\" achievement!");
+                achievementPrompt.setIcon(R.drawable.ic_ac_meme_begin);
+                achievementPrompt.show();
+                achievementPrompt.getWindow().setLayout(1100, 400);
+                sharedPreferences.edit().putString("memeBeginnerAchieve", LocalDate.now().toString()).apply();
+            }
         }
 
         //Configure the items
@@ -117,27 +131,83 @@ public class AlarmFragment extends Fragment {
         alarmBinding.downloadImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Drawable meme = alarmBinding.dailyImageContent.getDrawable();
-                if (ContextCompat.checkSelfPermission(v.getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                    saveGitToGallery(memeUrl, meme);
-                } else {
-                    GetPermission();
+                if (alarmBinding.dailyImageContent.getDrawable().getIntrinsicWidth() != getResources().getDrawable( R.drawable.ic_image2).getIntrinsicWidth()) {
+                    Drawable meme = alarmBinding.dailyImageContent.getDrawable();
+                    if (ContextCompat.checkSelfPermission(v.getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                        int memeDownloadTimes = sharedPreferences.getInt("memeDownloadTimes", 0);
+                        sharedPreferences.edit().putInt("memeDownloadTimes", memeDownloadTimes + 1).apply();
+                        memeDownloadAchievementCheck();
+                        saveGitToGallery(memeUrl, meme);
+                    } else {
+                        GetPermission();
+                    }
                 }
+                else
+                    Toast.makeText(getContext(), "No Meme there, you can receive Meme by turn on Sobriety Reminder", Toast.LENGTH_SHORT).show();
+
             }
         });
 
         alarmBinding.dailyImageContent.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                Drawable meme = alarmBinding.dailyImageContent.getDrawable();
-                if (ContextCompat.checkSelfPermission(v.getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                    saveGitToGallery(memeUrl, meme);
-                } else {
-                    GetPermission();
+                if (alarmBinding.dailyImageContent.getDrawable().getIntrinsicWidth() != getResources().getDrawable( R.drawable.ic_image2).getIntrinsicWidth()) {
+                    Drawable meme = alarmBinding.dailyImageContent.getDrawable();
+                    if (ContextCompat.checkSelfPermission(v.getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                        int memeDownloadTimes = sharedPreferences.getInt("memeDownloadTimes", 0);
+                        sharedPreferences.edit().putInt("memeDownloadTimes", memeDownloadTimes + 1).apply();
+                        memeDownloadAchievementCheck();
+                        saveGitToGallery(memeUrl, meme);
+                    } else {
+                        GetPermission();
+                    }
                 }
+                else
+                    Toast.makeText(getContext(), "No Meme there, you can receive Meme by turn on Sobriety Reminder", Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
+    }
+
+    /**
+     * Achievement hints are given when the download meme level is met
+     */
+    private void memeDownloadAchievementCheck() {
+        int memeDownloadTimes = sharedPreferences.getInt("memeDownloadTimes", 0);
+        sharedPreferences = getContext().getSharedPreferences("DrinkingPalSharedPreferences", getContext().MODE_PRIVATE);
+
+
+        //Initial the AlterDialog
+        AlertDialog achievementPrompt = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyle)
+                .setTitle("Achievement")
+                .create();
+
+        //Provide prompt if the memeDownloadTimes achieve specific number
+        if (memeDownloadTimes == 1) {
+            achievementPrompt.setMessage("Obtain \"Meme Star\" achievement!");
+            achievementPrompt.setIcon(R.drawable.ic_ac_meme_star);
+            achievementPrompt.show();
+            sharedPreferences.edit().putString("memeStarAchieve", LocalDate.now().toString()).apply();
+
+        } else if (memeDownloadTimes == 10) {
+            achievementPrompt.setMessage("Obtain \"Meme Super\" achievement!");
+            achievementPrompt.setIcon(R.drawable.ic_ac_meme_super);
+            achievementPrompt.show();
+            sharedPreferences.edit().putString("memeSuperAchieve", LocalDate.now().toString()).apply();
+        } else if (memeDownloadTimes == 25) {
+            achievementPrompt.setMessage("Obtain \"Meme Expert\" achievement!");
+            achievementPrompt.setIcon(R.drawable.ic_ac_meme_expert);
+            achievementPrompt.show();
+            sharedPreferences.edit().putString("memeExpertAchieve", LocalDate.now().toString()).apply();
+        } else if (memeDownloadTimes == 50) {
+            achievementPrompt.setMessage("Obtain \"Meme Master\" achievement!");
+            achievementPrompt.setIcon(R.drawable.ic_ac_meme_master);
+            achievementPrompt.show();
+            sharedPreferences.edit().putString("memeMasterAchieve", LocalDate.now().toString()).apply();
+        }
+
+        //Modify the width and height of AlterDialog
+        achievementPrompt.getWindow().setLayout(1100, 400);
     }
 
 

@@ -4,27 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <item android:title="Alcohol Information">
-        <menu>
-            <group
-                android:id="@+id/AlcoholInformationItems"
-                android:checkableBehavior="single"
-                android:enabled="true"
-                android:visible="true">
-                <item
-                    android:id="@+id/nav_information_fragment"
-                    android:icon="@drawable/ic_information"
-                    android:title="@string/InformationFeatureTitle" />
-
-                <item
-                    android:id="@+id/nav_consequence_fragment"
-                    android:icon="@drawable/ic_consequence"
-                    android:title="@string/ConsequenceTitle" />
-            </group>
-        </menu>
-    </item>
-
-
     <item android:title="Drinking Tool">
         <menu>
             <group
@@ -54,10 +33,33 @@
 
                 <item
                     android:id="@+id/timed_sobriety_reminder_switch"
-                    android:icon="@drawable/ic_alarm"
-                    android:title=""
                     app:actionLayout="@layout/switch_item"
                     app:showAsAction="always" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Alcohol Information">
+        <menu>
+            <group
+                android:id="@+id/AlcoholInformationItems"
+                android:checkableBehavior="single"
+                android:enabled="true"
+                android:visible="true">
+                <item
+                    android:id="@+id/nav_information_fragment"
+                    android:icon="@drawable/ic_information"
+                    android:title="@string/InformationFeatureTitle" />
+
+                <item
+                    android:id="@+id/nav_consequence_fragment"
+                    android:icon="@drawable/ic_consequence"
+                    android:title="@string/ConsequenceTitle" />
+
+                <item
+                    android:id="@+id/nav_data_fragment"
+                    android:icon="@drawable/ic_data"
+                    android:title="@string/DataTitle" />
             </group>
         </menu>
     </item>

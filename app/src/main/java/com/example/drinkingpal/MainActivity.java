@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
@@ -115,7 +116,13 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(binding.appBar.toolbar);
 
         //Configure the navigation drawer
-        appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_information_fragment, R.id.timed_sobriety_reminder_switch, R.id.nav_calculator_fragment, R.id.nav_quiz_fragment, R.id.nav_consequence_fragment,R.id.nav_achievement_fragment)
+        appBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_information_fragment,
+                R.id.timed_sobriety_reminder_switch,
+                R.id.nav_calculator_fragment,
+                R.id.nav_quiz_fragment,
+                R.id.nav_consequence_fragment,
+                R.id.nav_achievement_fragment,
+                R.id.nav_data_fragment)
                 .setOpenableLayout(binding.drawerLayout).build();
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -198,7 +205,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 };
 
-                TimePickerDialog timePickerDialog = new TimePickerDialog(view.getContext(), onTimeSetListener, hour, minute, true);
+
+                TimePickerDialog timePickerDialog = new TimePickerDialog(new ContextThemeWrapper(view.getContext(),R.style.TimePicker), onTimeSetListener, hour, minute, true);
                 timePickerDialog.setTitle("Select Start Time");
                 timePickerDialog.show();
             }
@@ -217,7 +225,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 };
 
-                TimePickerDialog timePickerDialog = new TimePickerDialog(view.getContext(), onTimeSetListener, hour, minute, true);
+                TimePickerDialog timePickerDialog = new TimePickerDialog(new ContextThemeWrapper(view.getContext(),R.style.TimePicker), onTimeSetListener, hour, minute, true);
                 timePickerDialog.setTitle("Select End Time");
                 timePickerDialog.show();
             }

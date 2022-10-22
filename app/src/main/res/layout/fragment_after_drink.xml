@@ -451,7 +451,8 @@
                 android:layout_marginLeft="4sp"
                 android:layout_marginRight="4sp"
                 android:background="@drawable/textview_border5"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:id="@+id/hair_title"
@@ -501,12 +502,6 @@
                     android:textSize="20sp"
                     android:visibility="gone" />
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/blankTextView10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/FillWithBlankLine2" />
 
         </LinearLayout>
     </ScrollView>
